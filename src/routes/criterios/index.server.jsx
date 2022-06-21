@@ -41,7 +41,7 @@ const COLLECTIONS_QUERY = gql`
           title
           id
           handle
-          description
+          descriptionHtml
           image {
             url
           }

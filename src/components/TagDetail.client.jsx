@@ -1,6 +1,7 @@
 import {useAtom} from 'jotai';
 import {useEffect} from 'react';
 import {CollectionPageSelectedAtom} from '../atoms/collection-page-selected';
+import {isMobile} from 'react-device-detect';
 
 export default function TagDetail({collections}) {
   const [selectedCollection, setSelectedCollection] = useAtom(
@@ -14,7 +15,9 @@ export default function TagDetail({collections}) {
   );
 
   useEffect(() => {
-    window.location = `#${collection.handle}`;
+    if (isMobile) {
+      window.location = `#${collection.handle}`;
+    }
   }, []);
 
   return (
@@ -27,21 +30,37 @@ export default function TagDetail({collections}) {
           {collections?.map((coll) => {
             const isSelected = collection?.handle === coll.handle;
 
+            if (isMobile) {
+              return (
+                <a href="#description">
+                  <img
+                    id={coll.handle}
+                    key={coll.handle}
+                    onClick={() => {
+                      setSelectedCollection(coll.handle);
+                    }}
+                    width="115px"
+                    height="115px"
+                    src={coll.metafields[0]?.value}
+                    alt={coll.title}
+                    className={`cursor-pointer ${!isSelected && 'opacity-30'}`}
+                  />
+                </a>
+              );
+            }
             return (
-              <a href="#description">
-                <img
-                  id={coll.handle}
-                  key={coll.handle}
-                  onClick={() => {
-                    setSelectedCollection(coll.handle);
-                  }}
-                  width="115px"
-                  height="115px"
-                  src={coll.metafields[0]?.value}
-                  alt={coll.title}
-                  className={`cursor-pointer ${!isSelected && 'opacity-30'}`}
-                />
-              </a>
+              <img
+                id={coll.handle}
+                key={coll.handle}
+                onClick={() => {
+                  setSelectedCollection(coll.handle);
+                }}
+                width="115px"
+                height="115px"
+                src={coll.metafields[0]?.value}
+                alt={coll.title}
+                className={`cursor-pointer ${!isSelected && 'opacity-30'}`}
+              />
             );
           })}
         </div>
@@ -53,7 +72,9 @@ export default function TagDetail({collections}) {
         <h4 className="text-smallTitle text-principal font-bold">
           {collection?.title}
         </h4>
-        <p>{collection?.description}</p>
+        <p dangerouslySetInnerHTML={{__html: collection?.descriptionHtml}}>
+          {collection?.description}
+        </p>
       </div>
     </>
   );
