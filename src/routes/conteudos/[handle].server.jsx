@@ -22,13 +22,13 @@ export default function Page({params}) {
   return (
     <>
       <Slogan />
-      <div className="text-center flex flex-col justify-center items-center mt-12">
-        <h2 className="text-subtitleMobile md:text-subtitle font-bold mb-[4rem]">
+      <div className="text-center flex flex-col justify-center items-center">
+        <h2 className="text-subtitleMobile md:text-subtitle font-bold mb-12">
           Conteúdos
         </h2>
 
         <img
-          className="max-h-[400px] object-contain mb-[2rem]"
+          className="max-h-[400px] object-contain mb-12"
           width="90%"
           height="intrinsic"
           src={article?.image?.src}
@@ -39,9 +39,10 @@ export default function Page({params}) {
           {article?.title}
         </h2>
 
-        <p className="text-text text-left text-principal mt-[2rem] mb-[4rem]">
-          {article?.content}
-        </p>
+        <p
+          className="text-text text-left text-principal mt-12 mb-[4rem]"
+          dangerouslySetInnerHTML={{__html: article.contentHtml}}
+        ></p>
       </div>
     </>
   );
@@ -56,7 +57,7 @@ const QUERY = gql`
             edges {
               node {
                 title
-                content
+                contentHtml
                 id
                 image {
                   src
