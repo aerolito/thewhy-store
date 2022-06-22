@@ -47,7 +47,7 @@ export default function Filter({options, products, type, label}) {
   };
 
   return (
-    <div className="uppercase text-principal text-highlighted flex flex-col items-start w-[274px]">
+    <div className="uppercase text-principal text-small flex flex-col items-start w-[274px]">
       <h5>{label}</h5>
       <div className="flex flex-col gap-2 m-8 mt-4 ml-0 items-start flex-wrap">
         {options?.map((option) => {
@@ -64,7 +64,7 @@ export default function Filter({options, products, type, label}) {
               </div>
               <label
                 htmlFor={option}
-                className=" cursor-pointer pl-2 text-text"
+                className=" cursor-pointer pl-2 text-smallText"
               >
                 {option}
               </label>
