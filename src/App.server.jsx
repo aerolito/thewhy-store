@@ -4,7 +4,6 @@ import {Suspense} from 'react';
 import shopifyConfig from '../shopify.config';
 import DefaultSeo from './components/DefaultSeo.server';
 import NotFound from './components/NotFound.server';
-import CartProvider from './components/CartProvider.client';
 import Layout from './components/Layout.server';
 import {ApolloCustomProvider} from './providers/apollo-custom-provider.client';
 import {BoxFallback} from './components/BoxFallback.server';
@@ -15,16 +14,14 @@ function App({routes}) {
     <Suspense fallback={<BoxFallback />}>
       <ShopifyProvider shopifyConfig={shopifyConfig}>
         <ApolloCustomProvider>
-          <CartProvider>
-            <DefaultSeo />
-            <Router>
-              <Layout>
-                <FileRoutes routes={routes} />
-                <Route path="*" page={<NotFound />} />
-                {/* <CookieBanner /> */}
-              </Layout>
-            </Router>
-          </CartProvider>
+          <DefaultSeo />
+          <Router>
+            <Layout>
+              <FileRoutes routes={routes} />
+              <Route path="*" page={<NotFound />} />
+              {/* <CookieBanner /> */}
+            </Layout>
+          </Router>
         </ApolloCustomProvider>
       </ShopifyProvider>
     </Suspense>
