@@ -98,7 +98,7 @@ export default function ProductsPage(req) {
                   />
                 </Suspense>
               </div>
-              <div className="w-full md:w-[91%] md:w-full m-auto">
+              <div className="w-[91%] lg:w-full m-auto">
                 <Suspense fallback={<BoxFallback />}>
                   <ProductList products={products} />
                 </Suspense>

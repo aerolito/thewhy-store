@@ -18,13 +18,13 @@ export default function ProductList({products}) {
   }, []);
 
   return (
-    <div className="flex gap-x-9 gap-y-[4.5rem] flex-wrap justify-center md:justify-start lg:min-w-[894px] relative ">
+    <div className="flex gap-x-9 gap-y-[4.5rem] flex-wrap justify-center md:justify-start relative ">
       {productList && productList?.length > 0
         ? productList?.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))
         : hasFilter && (
-            <h3 className="font-bold text-principal text-smallTitle absolute translate-x-1/2 translate-y-1/2">
+            <h3 className="font-bold text-principal text-smallTitle m-auto">
               Não temos esse produto :(
             </h3>
           )}
