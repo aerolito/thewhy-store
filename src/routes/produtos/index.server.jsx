@@ -76,10 +76,10 @@ export default function ProductsPage(req) {
     <>
       <div className="mb-12">
         <Slogan />
-        <div className=" min-h-[50vh] flex my-12 gap-12 md:gap-0 flex-col md:flex-row">
+        <div className=" min-h-[50vh] flex my-12 gap-12 lg:gap-0 flex-col lg:flex-row">
           {products && products?.length > 0 ? (
             <>
-              <div className="flex flex-col items-center md:gap-12">
+              <div className="flex flex-col items-center lg:gap-12 lg:absolute lg:left-[3rem]">
                 <Suspense fallback={<BoxFallback />}>
                   <Filter
                     products={products}

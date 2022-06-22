@@ -56,7 +56,7 @@ export default function Header({collections, storeName}) {
   return (
     <>
       <header className="pt-4" role="banner">
-        <div className="z-20  w-full max-w-[1900px] px-[1rem] md:px-[2rem] lg:pb-0 mx-auto bg-white">
+        <div className="z-20  w-full px-[1rem] md:px-[2rem] lg:pb-0 mx-auto bg-white">
           <div className="h-full flex  place-content-between">
             <div className="text-center w-full flex justify-between items-center">
               <Navigation
