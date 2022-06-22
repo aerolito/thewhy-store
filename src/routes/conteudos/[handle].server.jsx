@@ -28,8 +28,8 @@ export default function Page({params}) {
         </h2>
 
         <img
-          className="max-h-[400px] object-contain mb-12"
-          width="90%"
+          className=" object-contain mb-12"
+          width="100%"
           height="intrinsic"
           src={article?.image?.src}
           alt={article?.title}

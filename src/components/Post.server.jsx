@@ -14,7 +14,9 @@ export default function Post({post}) {
             />
           ) : null}
         </div>
-        <h2 className="text-principal text-highlighted">{post.title}</h2>
+        <h2 className="text-left font-bold text-principal text-highlighted">
+          {post.title}
+        </h2>
       </a>
     </div>
   );

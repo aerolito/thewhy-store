@@ -47,9 +47,9 @@ export default function Filter({options, products, type, label}) {
   };
 
   return (
-    <div className="uppercase text-principal text-small flex flex-col items-start w-[274px]">
+    <div className="uppercase text-principal text-small flex flex-col items-start w-[245px] md:w-[185px]">
       <h5>{label}</h5>
-      <div className="flex flex-col gap-2 m-8 mt-4 ml-0 items-start flex-wrap">
+      <div className="flex flex-col gap-2 m-8 mt-4 ml-0 items-start">
         {options?.map((option) => {
           return (
             <div className="flex" key={option}>

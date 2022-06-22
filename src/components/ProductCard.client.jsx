@@ -38,7 +38,7 @@ export default function ProductCard({product}) {
 
   return (
     <>
-      <div className="shadow-[0_4px_15px_0px_rgba(0,0,0,0.15)] items-start relative w-[274px] h-[427px] duration-500 ease-in-out transform hover:scale-105">
+      <div className="shadow-[0_4px_15px_0px_rgba(0,0,0,0.15)] items-start relative w-[250px] lg:w-[274px] h-[427px] duration-500 ease-in-out transform hover:scale-105">
         <button
           className="w-[50px] h-[50px] absolute top-0 right-0 hover:scale-110 flex justify-center items-center"
           onClick={handleClick}

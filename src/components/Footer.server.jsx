@@ -5,9 +5,9 @@ export default function Footer() {
   return (
     <footer role="contentinfo">
       <div className="relative bg-black  border-t border-b border-black border-opacity-5 ">
-        <div className="flex flex-col md:flex-row justify-between mx-auto  max-w-[970px] px-4 py-14 md:px-8">
+        <div className="flex flex-col md:flex-row justify-between mx-auto  max-w-[970px] px-4 py-20 md:px-8">
           <div>
-            <p className="text-text mt-12 font-bold text-white uppercase mb-8">
+            <p className="text-text font-bold text-white uppercase mb-8">
               SOBRE
             </p>
             <ul className=" space-y-4">
@@ -17,7 +17,7 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <p className="text-text mt-12 font-bold uppercase mb-8 text-white">
+            <p className="text-text font-bold uppercase mb-8 text-white">
               FAÇA PARTE
             </p>
             <ul className=" space-y-4">
@@ -27,7 +27,7 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <p className="text-text mt-12 font-bold uppercase mb-8  text-white">
+            <p className="text-text font-bold uppercase mb-8  text-white">
               ASSINAR NEWSLETTER
             </p>
 
@@ -36,7 +36,7 @@ export default function Footer() {
             {/* </Suspense> */}
           </div>
           <div>
-            <p className="text-text mt-12 font-bold uppercase mb-8  text-white">
+            <p className="text-text font-bold uppercase mb-8  text-white">
               ENCONTRE-NOS
             </p>
             <ul className=" space-y-4">

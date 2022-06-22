@@ -1,8 +1,8 @@
 export default function HowThisWorks() {
   return (
     <div className="min-h-screen text-center flex flex-col justify-center items-center gap-20 my-20">
-      <section className="flex flex-col md:flex-row items-center md:items-start  justify-center gap-20 text-center md:text-left">
-        <div className="w-1/2">
+      <section className="flex flex-col md:flex-row items-center md:items-start md:h-[350px] gap-20 md:gap-0 justify-center text-justify">
+        <div className=" w-[90%] md:w-1/2">
           <h2 className="text-principal text-subtitleMobile md:text-subtitle font-bold mb-12">
             como funciona
           </h2>
@@ -19,12 +19,18 @@ export default function HowThisWorks() {
           </p>
         </div>
 
-        <img src="/howfoto.jpg" className="w-[90%] max-w-[450px] h-[350px]" />
+        <img
+          src="/howfoto.jpg"
+          className="w-[90%] max-w-[450px] h-[350px] md:pl-20"
+        />
       </section>
-      <section className="flex flex-col-reverse md:flex-row items-center md:items-start d:items-start justify-center gap-20 text-center md:text-left">
-        <img src="/misfoto.jpeg" className="w-[90%] max-w-[450px] h-[350px]" />
+      <section className="flex flex-col-reverse md:flex-row items-center md:items-start d:items-start gap-20 md:gap-0 justify-center text-justify">
+        <img
+          src="/misfoto.jpeg"
+          className="w-[90%] max-w-[450px] h-[350px] md:pr-20"
+        />
 
-        <div className="w-1/2">
+        <div className=" w-[90%] md:w-1/2">
           <h2 className="text-principal text-subtitleMobile md:text-subtitle font-bold mb-12">
             nossa missão
           </h2>

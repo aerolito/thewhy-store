@@ -8,6 +8,10 @@ export default function RedirectModal({link}) {
 
   useEffect(() => {
     document.body.style.overflow = 'hidden';
+
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
   }, []);
 
   useEffect(() => {
@@ -30,16 +34,16 @@ export default function RedirectModal({link}) {
         src="/white-logo.svg"
         width="198px"
         height="139px"
-        className="w-[100px] md:w-[198px] md:h-[139px]"
+        className="w-[100px]"
       />
 
-      <p className="text-text md:text-smallTitle w-[90%] max-w-[1000px] text-center">
+      <p className="text-text w-[90%] max-w-[550px] text-center">
         SE VOCÊ CHEGOU ATÉ AQUI ACREDITAMOS QUE TENHA REFLETIDO SOBRE SUA COMPRA
         E JÁ PODE SER CONSIDERADO UM CONSUMIDOR CONSCIENTE, QUE AINDA PODE FAZER
         MUITO MAIS PELOS FUTURO SE PENSAR MELHOR
       </p>
 
-      <span className="text-title md:text-bigTitle">
+      <span className="text-title">
         00:{countdown < 10 ? `0${countdown}` : countdown}
       </span>
     </div>
