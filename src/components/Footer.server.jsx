@@ -17,7 +17,7 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <p className="text-text mt-12 font-bold uppercase mb-8 text-white">
+            <p className="text-text mt-12 md:mt-0 font-bold uppercase mb-8 text-white">
               FAÇA PARTE
             </p>
             <ul className=" space-y-4">
@@ -27,7 +27,7 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <p className="text-text mt-12 font-bold uppercase mb-8  text-white">
+            <p className="text-text mt-12 md:mt-0 font-bold uppercase mb-8  text-white">
               ASSINAR NEWSLETTER
             </p>
 
@@ -36,7 +36,7 @@ export default function Footer() {
             {/* </Suspense> */}
           </div>
           <div>
-            <p className="text-text mt-12 font-bold uppercase mb-8  text-white">
+            <p className="text-text mt-12 md:mt-0 font-bold uppercase mb-8  text-white">
               ENCONTRE-NOS
             </p>
             <ul className=" space-y-4">
