@@ -52,6 +52,16 @@ export default function Product() {
 const QUERY = gql`
   query product($handle: String!) {
     product: product(handle: $handle) {
+      compareAtPriceRange {
+        maxVariantPrice {
+          currencyCode
+          amount
+        }
+        minVariantPrice {
+          currencyCode
+          amount
+        }
+      }
       collections(first: 30) {
         edges {
           node {
@@ -79,8 +89,10 @@ const QUERY = gql`
       media(first: 6) {
         edges {
           node {
-            image {
-              url
+            ... on MediaImage {
+              image {
+                url
+              }
             }
           }
         }
@@ -107,6 +119,10 @@ const QUERY = gql`
             availableForSale
             id
             title
+            priceV2 {
+              amount
+              currencyCode
+            }
           }
         }
       }
