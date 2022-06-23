@@ -79,9 +79,8 @@ const QUERY = gql`
       media(first: 6) {
         edges {
           node {
-              image {
-                url
-              }
+            image {
+              url
             }
           }
         }

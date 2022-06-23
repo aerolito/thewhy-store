@@ -285,7 +285,7 @@
 
 "@emailjs/browser@^3.6.2":
   version "3.6.2"
-  resolved "https://registry.yarnpkg.com/@emailjs/browser/-/browser-3.6.2.tgz#8124b656953fae490405ba330aa3aebc1aeb6cd2"
+  resolved "https://registry.npmjs.org/@emailjs/browser/-/browser-3.6.2.tgz"
   integrity sha512-Swc8w+vwDX4XPy6tPegOFGSwHqNiEmEsIKbtAkqHo2WqnS0ORZUnnuZats2R3XqwfxNQD0F6RwnlVWHIMf6sCQ==
 
 "@eslint/eslintrc@^0.4.3":
@@ -3999,7 +3999,7 @@ react-cookie-consent@^7.4.1:
 
 react-device-detect@^2.2.2:
   version "2.2.2"
-  resolved "https://registry.yarnpkg.com/react-device-detect/-/react-device-detect-2.2.2.tgz#dbabbce798ec359c83f574c3edb24cf1cca641a5"
+  resolved "https://registry.npmjs.org/react-device-detect/-/react-device-detect-2.2.2.tgz"
   integrity sha512-zSN1gIAztUekp5qUT/ybHwQ9fmOqVT1psxpSlTn1pe0CO+fnJHKRLOWWac5nKxOxvOpD/w84hk1I+EydrJp7SA==
   dependencies:
     ua-parser-js "^1.0.2"
@@ -4026,7 +4026,7 @@ react-fast-compare@^3.2.0:
 
 react-gallery-carousel@0.2.9:
   version "0.2.9"
-  resolved "https://registry.yarnpkg.com/react-gallery-carousel/-/react-gallery-carousel-0.2.9.tgz#6f18e9a0c21811095ca1011bdd2ec9778a7a2afa"
+  resolved "https://registry.npmjs.org/react-gallery-carousel/-/react-gallery-carousel-0.2.9.tgz"
   integrity sha512-UQ2WPyGWC72DtzbHJfQ91gQ2h7RIehd1q/aNnDP4F7iFjqUGUho8mojCWAsz7xLqGCVK9W+QDkqDMtoklLzxJA==
 
 react-helmet-async@^1.2.3:
@@ -4911,7 +4911,7 @@ typedarray-to-buffer@^3.1.5:
 
 ua-parser-js@^1.0.2:
   version "1.0.2"
-  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-1.0.2.tgz#e2976c34dbfb30b15d2c300b2a53eac87c57a775"
+  resolved "https://registry.npmjs.org/ua-parser-js/-/ua-parser-js-1.0.2.tgz"
   integrity sha512-00y/AXhx0/SsnI51fTc0rLRmafiGOM4/O+ny10Ps7f+j/b8p/ZY11ytMgznXkOVo4GQ+KwQG5UQLkLGirsACRg==
 
 ufo@^0.7.10:

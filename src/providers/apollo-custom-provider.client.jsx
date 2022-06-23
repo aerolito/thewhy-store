@@ -7,10 +7,10 @@ import {
 } from '@apollo/client';
 
 export const client = new ApolloClient({
-  uri: process.env.REACT_APP_URI,
+  uri: 'https://thewhy-store.myshopify.com/api/2022-04/graphql.json',
   cache: new InMemoryCache(),
   headers: {
-    'X-Shopify-Storefront-Access-Token': process.env.REACT_APP_STOREFRONT_TOKEN,
+    'X-Shopify-Storefront-Access-Token': '8da66e4bcd6184accb29e483d1e1403b',
   },
 });
 
