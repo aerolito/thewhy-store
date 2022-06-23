@@ -5,7 +5,6 @@ import Filter from '../../components/Filter.client';
 import ProductList from '../../components/ProductList.client';
 import {Suspense} from 'react';
 import {BoxFallback} from '../../components/BoxFallback.server';
-import {BackButton} from '../../components/BackButton.client';
 import {Slogan} from '../../components/Slogan.server';
 
 export default function ProductsPage(req) {

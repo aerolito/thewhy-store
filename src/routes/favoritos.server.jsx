@@ -1,6 +1,5 @@
 import Wishlist from '../components/Wishlist.client';
 import {Slogan} from '../components/Slogan.server';
-import {BackButton} from '../components/BackButton.client';
 
 export default function WishlistPage() {
   return (

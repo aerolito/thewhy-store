@@ -1,7 +1,6 @@
 import {useShopQuery, Seo, flattenConnection, Image} from '@shopify/hydrogen';
 import gql from 'graphql-tag';
 import {Suspense} from 'react';
-import {BackButton} from '../../components/BackButton.client';
 import {BoxFallback} from '../../components/BoxFallback.server';
 import NotFound from '../../components/NotFound.server';
 import ProductList from '../../components/ProductList.client';

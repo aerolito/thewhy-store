@@ -1,7 +1,6 @@
 import {useShopQuery, flattenConnection} from '@shopify/hydrogen';
 import gql from 'graphql-tag';
 import {Slogan} from '../../components/Slogan.server';
-import {BackButton} from '../../components/BackButton.client';
 import TagDetail from '../../components/TagDetail.client';
 
 export default function Collections({search}) {

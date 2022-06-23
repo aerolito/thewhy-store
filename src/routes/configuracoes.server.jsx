@@ -1,4 +1,3 @@
-import {BackButton} from '../components/BackButton.client';
 import SettingsForm from '../components/SettingsForm.client';
 import {Slogan} from '../components/Slogan.server';
 

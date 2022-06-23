@@ -7,7 +7,6 @@ import NotFound from '../../components/NotFound.server';
 import {Suspense} from 'react';
 import {BoxFallback} from '../../components/BoxFallback.server';
 import Tags from '../../components/Tags.server';
-import {BackButton} from '../../components/BackButton.client';
 
 export default function Product() {
   const {handle} = useRouteParams();
@@ -53,16 +52,6 @@ export default function Product() {
 const QUERY = gql`
   query product($handle: String!) {
     product: product(handle: $handle) {
-      compareAtPriceRange {
-        maxVariantPrice {
-          currencyCode
-          amount
-        }
-        minVariantPrice {
-          currencyCode
-          amount
-        }
-      }
       collections(first: 30) {
         edges {
           node {
@@ -90,42 +79,7 @@ const QUERY = gql`
       media(first: 6) {
         edges {
           node {
-            ... on MediaImage {
-              mediaContentType
               image {
-                id
-                url
-                altText
-                width
-                height
-              }
-            }
-            ... on Video {
-              mediaContentType
-              id
-              previewImage {
-                url
-              }
-              sources {
-                mimeType
-                url
-              }
-            }
-            ... on ExternalVideo {
-              mediaContentType
-              id
-              embedUrl
-              host
-            }
-            ... on Model3d {
-              mediaContentType
-              id
-              alt
-              mediaContentType
-              previewImage {
-                url
-              }
-              sources {
                 url
               }
             }
@@ -140,34 +94,7 @@ const QUERY = gql`
             namespace
             key
             value
-            createdAt
-            updatedAt
-            description
-            reference {
-              __typename
-              ... on MediaImage {
-                id
-                mediaContentType
-                image {
-                  id
-                  url
-                  altText
-                  width
-                  height
-                }
-              }
-            }
           }
-        }
-      }
-      priceRange {
-        maxVariantPrice {
-          currencyCode
-          amount
-        }
-        minVariantPrice {
-          currencyCode
-          amount
         }
       }
       seo {
@@ -179,67 +106,8 @@ const QUERY = gql`
         edges {
           node {
             availableForSale
-            compareAtPriceV2 {
-              amount
-              currencyCode
-            }
             id
-            image {
-              id
-              url
-              altText
-              width
-              height
-            }
-            metafields(first: 10) {
-              edges {
-                node {
-                  id
-                  type
-                  namespace
-                  key
-                  value
-                  createdAt
-                  updatedAt
-                  description
-                  reference {
-                    __typename
-                    ... on MediaImage {
-                      id
-                      mediaContentType
-                      image {
-                        id
-                        url
-                        altText
-                        width
-                        height
-                      }
-                    }
-                  }
-                }
-              }
-            }
-            priceV2 {
-              amount
-              currencyCode
-            }
-            selectedOptions {
-              name
-              value
-            }
-            sku
             title
-            unitPrice {
-              amount
-              currencyCode
-            }
-            unitPriceMeasurement {
-              measuredType
-              quantityUnit
-              quantityValue
-              referenceUnit
-              referenceValue
-            }
           }
         }
       }

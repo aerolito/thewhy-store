@@ -1,4 +1,3 @@
-import {BackButton} from '../components/BackButton.client';
 import SignUpForm from '../components/Sign/SignUpForm.client';
 import {Slogan} from '../components/Slogan.server';
 

@@ -1,6 +1,5 @@
 import {flattenConnection, useShopQuery} from '@shopify/hydrogen';
 import gql from 'graphql-tag';
-import {BackButton} from '../../components/BackButton.client';
 import Post from '../../components/Post.server';
 import {Slogan} from '../../components/Slogan.server';
 

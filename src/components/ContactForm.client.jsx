@@ -1,5 +1,4 @@
 import {useRef, useState} from 'react';
-import Button from './Button.client';
 import emailjs from '@emailjs/browser';
 import {toast} from './Toast.client';
 

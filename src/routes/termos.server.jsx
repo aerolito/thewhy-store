@@ -1,4 +1,3 @@
-import {BackButton} from '../components/BackButton.client';
 import {Slogan} from '../components/Slogan.server';
 
 export default function Terms() {

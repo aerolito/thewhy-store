@@ -1,5 +1,4 @@
 export default function ProductOptions({variants}) {
-  console.log(variants);
   return (
     <>
       {variants && variants[0].title !== 'Default Title' && (

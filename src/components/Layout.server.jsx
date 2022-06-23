@@ -10,7 +10,6 @@ import Header from './Header.client';
 import Footer from './Footer.server';
 import {Suspense} from 'react';
 import CustomToastContainer from './Toast.client';
-import {BoxFallback} from './BoxFallback.server';
 import {BackButton} from './BackButton.client';
 
 /**
