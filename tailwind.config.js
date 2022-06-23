@@ -41,7 +41,7 @@ module.exports = {
       smallText: '0.875rem',
     },
     colors: {
-      principal: '#282828',
+      principal: '#000000',
       hovered: '#6C6C6C',
       white: '#ffffff',
       greywhite: '#FAFAFA',
