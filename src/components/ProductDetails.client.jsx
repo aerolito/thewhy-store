@@ -62,11 +62,11 @@ export default function ProductDetails({product, vendorData}) {
 
   return (
     <>
-      <div className="flex pb-20 w-full h-full items-center md:items-start justify-center flex-col md:flex-row">
+      <div className="flex pb-20 gap-12 md:gap-0 w-full h-full items-center md:items-start justify-center flex-col md:flex-row">
         <div className="max-h-[585px] max-w-[585px] w-[90%] md:w-1/2 h-full object-contain">
           <Carousel images={images} />
         </div>
-        <div className="gap-8 pl-8 md:h-[523.5px] flex flex-col w-[90%] md:w-1/2 justify-between">
+        <div className="gap-8 md:pl-8 md:h-[523.5px] flex flex-col w-[100%] md:w-1/2 justify-between">
           <div>
             <h3 className="text-principal text-smallTitle font-bold">
               {product.title}
