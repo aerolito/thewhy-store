@@ -4,6 +4,9 @@ import {
   updateCurrentUser,
 } from 'firebase/auth';
 import {toast} from '../components/Toast.client';
+import {handleUserData} from './handleUserData';
+import {handleEmailVerification} from './handleEmailVerification';
+import {handleNewsletterMailling} from './handleNewsletterMailling';
 
 export async function handleSignup(
   auth,
@@ -12,19 +15,29 @@ export async function handleSignup(
   displayName,
   cpf,
   phoneNumber,
+  birthDate,
 ) {
   const response = createUserWithEmailAndPassword(auth, email, password)
     .then(async (userCredential) => {
       const token = userCredential?.user?.accessToken;
       const userId = userCredential?.user?.uid;
 
-      return updateCurrentUser(auth.currentUser, {
+      return await handleUserData({
+        userId,
         displayName,
-        uid: cpf,
+        email,
+        cpf,
         phoneNumber,
+        birthDate,
       })
-        .then(() => {
-          toast.success(`Cadastro realizado com sucesso!`);
+        .then(async () => {
+          await handleEmailVerification(auth);
+
+          await handleNewsletterMailling(email);
+
+          toast.success(
+            `Cadastro realizado com sucesso! Email de verificação enviado.`,
+          );
 
           return {token, userId, displayName, email};
         })

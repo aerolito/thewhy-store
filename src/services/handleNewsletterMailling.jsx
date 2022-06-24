@@ -13,10 +13,7 @@ export const handleNewsletterMailling = async (email) => {
     };
 
     await setDoc(newsletterMailling, data);
-
-    toast.success(`Newsletter cadastrada com sucesso!`);
   } catch {
-    toast.error(`Desculpe, tivemos um problema.`);
     return false;
   }
 };

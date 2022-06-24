@@ -1,4 +1,4 @@
-import {signInWithEmailAndPassword} from 'firebase/auth';
+import {signInWithEmailAndPassword, signOut} from 'firebase/auth';
 import {toast} from '../components/Toast.client';
 
 export async function handleSignin(auth, email, password) {
@@ -8,6 +8,18 @@ export async function handleSignin(auth, email, password) {
       const userId = userCredential?.user?.uid;
       const userDisplayName = userCredential?.user?.displayName;
       const userEmail = userCredential?.user?.email;
+
+      const verified = userCredential?.user?.emailVerified;
+
+      if (!!!verified) {
+        toast.error(
+          `Email não verificado, por favor acesse seu email cadastrado.`,
+        );
+
+        await signOut(auth);
+
+        return;
+      }
 
       toast.success(`Login realizado com sucesso!`);
 

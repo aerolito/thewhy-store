@@ -11,8 +11,8 @@ export default function SignDecision() {
   };
 
   return (
-    <div className={`w-full max-w-[1900px] px-[1rem] lg:pb-0 mx-auto relative`}>
-      <div className="translate-x-1/2 -translate-y-1/2 overflow-y-hidden overflow-x-hidden absolute right-[175px] top-[85px] z-50 rounded-lg shadow-[0_4px_15px_0px_rgba(0,0,0,0.15)] bg-white p-4 w-[80vw] h-[200px] max-w-[280px]">
+    <div className={`w-full px-[1rem] lg:pb-0 mx-auto relative`}>
+      <div className="translate-x-1/2 -translate-y-1/2 overflow-y-hidden overflow-x-hidden absolute right-[160px] md:right-[200px] top-[85px] z-50 rounded-lg shadow-[0_4px_15px_0px_rgba(0,0,0,0.15)] bg-white p-4 w-[80vw] h-[200px] max-w-[280px]">
         <div className="relative">
           <button
             onClick={() => setIsWishlistModalOpen(false)}

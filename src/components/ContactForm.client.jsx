@@ -73,7 +73,7 @@ export default function ContactForm() {
         type="submit"
         className={` ${
           isLoading && 'opacity-30 cursor-default'
-        }  px-8 py-2 m-auto text-white font-bold w-fit cursor-pointer bg-black rounded-[38px]`}
+        }  px-8 py-2 mb-12 text-white font-bold w-fit cursor-pointer bg-black rounded-[38px]`}
         value="feito!"
       />
     </form>

@@ -27,21 +27,17 @@ export default function SignIn() {
   const navigate = useNavigate();
 
   const onClickToSign = async () => {
-    const {token, userId, userDisplayName, userEmail} = await handleSignin(
-      auth,
-      email,
-      password,
-    );
+    const user = await handleSignin(auth, email, password);
 
-    if (!token || !userId) return;
+    if (!user) return;
 
     setIsWishlistModalOpen(false);
 
-    setAccessToken(token);
-    setUserId(userId);
+    setAccessToken(user.token);
+    setUserId(user.userId);
 
-    setUserDisplayName(userDisplayName);
-    setUserEmail(userEmail);
+    setUserDisplayName(user.userDisplayName);
+    setUserEmail(user.userEmail);
 
     navigate('/', {replace: true});
   };

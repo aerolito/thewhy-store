@@ -41,8 +41,10 @@ export default function Footer() {
             </p>
             <ul className=" space-y-4">
               <li className="flex items-center text-sm font-bold text-white hover:text-gray-900">
-                {/* to out site link */}
-                <a href="https://www.instagram.com/aaerolito" target="_blank">
+                <a
+                  href="https://www.instagram.com/the.whystore/"
+                  target="_blank"
+                >
                   <img src="/instagram-logo.svg" width="30px" height="30px" />
                 </a>
               </li>

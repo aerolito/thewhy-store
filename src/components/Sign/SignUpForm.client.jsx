@@ -3,12 +3,6 @@ import {getAuth} from 'firebase/auth';
 import {useAtom} from 'jotai';
 import {useState, useEffect} from 'react';
 import {isWishlistModalOpenAtom} from '../../atoms/is-wishlist-modal-open';
-import {
-  accessTokenAtom,
-  userDisplayNameAtom,
-  userEmailAtom,
-  userIdAtom,
-} from '../../atoms/user';
 import {app} from '../../configs/firebase';
 import {handleSignup} from '../../services/handleSignup';
 import {toast} from '../Toast.client';
@@ -18,13 +12,10 @@ export default function SignUpForm() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [termsAccepted, setTermsAccepted] = useState(false);
-  const [, setAccessToken] = useAtom(accessTokenAtom);
-  const [, setUserId] = useAtom(userIdAtom);
   const [, setIsWishlistModalOpen] = useAtom(isWishlistModalOpenAtom);
-  const [, setUserDisplayName] = useAtom(userDisplayNameAtom);
-  const [, setUserEmail] = useAtom(userEmailAtom);
   const [cpf, setCpf] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
+  const [birthdate, setBirthdate] = useState('');
 
   const auth = getAuth(app);
   const navigate = useNavigate();
@@ -38,19 +29,17 @@ export default function SignUpForm() {
       return toast.error(`Aceitar os termos é obrigatório`);
     }
 
-    const {
-      token,
-      userId,
-      displayName: userDisplayName,
-      email: userEmail,
-    } = await handleSignup(auth, email, password, name, cpf, phoneNumber);
+    const user = await handleSignup(
+      auth,
+      email,
+      password,
+      name,
+      cpf,
+      phoneNumber,
+      birthdate,
+    );
 
-    if (!token || !userId) return;
-
-    setAccessToken(token);
-    setUserId(userId);
-    setUserDisplayName(userDisplayName);
-    setUserEmail(userEmail);
+    if (!user) return;
 
     navigate('/', {replace: true});
   };
@@ -119,6 +108,18 @@ export default function SignUpForm() {
               type="text"
               placeholder="Preencha com seu telefone"
               onChange={(e) => setPhoneNumber(e.target.value)}
+            />
+          </div>
+
+          <div className="flex flex-col gap-[1rem] text-left">
+            <label className="text-principal font-bold text-text">
+              DATA DE NASCIMENTO:
+            </label>
+            <input
+              className="text-principal cursor-default text-text border-black border-[1px] rounded-full mb-12 w-[350px] py-2 px-4"
+              type="text"
+              placeholder="Preencha com sua Data de Nascimento"
+              onChange={(e) => setBirthdate(e.target.value)}
             />
           </div>
         </div>

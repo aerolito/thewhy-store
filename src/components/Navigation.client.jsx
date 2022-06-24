@@ -26,7 +26,7 @@ export default function Navigation({isOpen, setIsOpen}) {
         </button>
         {isOpen ? (
           <div className=" bg-white absolute top-10 z-10 px-4 pb-7 mt-7 ">
-            <ul>
+            <ul className="pt-2">
               <li>
                 <Link
                   className="group py-2 text-highlighted text-principal flex items-center justify-between hover:text-hovered"

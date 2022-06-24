@@ -4,6 +4,8 @@ import {handleNewsletterMailling} from '../services/handleNewsletterMailling';
 export default function NewsletterInput() {
   const [email, setEmail] = useState('');
 
+  // verificar se o user já está cadastrado e disparar popups aqui
+
   return (
     <>
       <div className="relative max-w-[254px]">

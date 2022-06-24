@@ -45,10 +45,10 @@ export default function Page({params, pathname}) {
     <>
       <Seo type="page" data={page} />
       <Slogan />
-      <div className="flex flex-col justify-center items-center gap-2 mb-20">
+      <div className="flex flex-col justify-center items-center gap-12 mb-12">
         <Image
           alt={handle}
-          src={`https://cdn.shopify.com/s/files/1/0583/2779/3826/files/${handle}.png`}
+          src={`https://cdn.shopify.com/s/files/1/0583/2779/3826/files/${handle}.svg`}
           className=""
           width="265px"
           height="60px"

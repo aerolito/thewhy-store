@@ -16,7 +16,7 @@ export function BackButton() {
       <div className="mb-6 md:mb-12 w-full max-w-[1900px] px-6 md:px-12">
         <button
           onClick={onClick}
-          className="cursor-pointer text-principal text-highlighted border-none background-transparent"
+          className="cursor-pointer text-text text-highlighted border-none background-transparent"
         >{`< Voltar`}</button>
       </div>
     ) : null)

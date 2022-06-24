@@ -3,7 +3,7 @@ export default function HowThisWorks() {
     <div className="min-h-screen text-center flex flex-col justify-center items-center gap-20 my-20">
       <section className="flex flex-col md:flex-row items-center md:items-start md:h-[350px] gap-20 md:gap-0 justify-center text-justify">
         <div className=" w-[90%] md:w-1/2">
-          <h2 className="text-principal text-subtitleMobile md:text-subtitle font-bold mb-12">
+          <h2 className="leading-[15px] text-principal text-subtitleMobile md:text-subtitle font-bold mb-10">
             como funciona
           </h2>
           <p className="text-lg font-medium mb-8 leading-6">
@@ -21,22 +21,19 @@ export default function HowThisWorks() {
 
         <img
           src="/howfoto.jpg"
-          className="w-[90%] max-w-[450px] h-[350px] md:pl-20"
+          className="w-[90%] max-w-[450px] h-[350px] md:pl-[2rem]"
         />
       </section>
       <section className="flex flex-col-reverse md:flex-row items-center md:items-start d:items-start gap-20 md:gap-0 justify-center text-justify">
         <img
           src="/misfoto.jpeg"
-          className="w-[90%] max-w-[450px] h-[350px] md:pr-20"
+          className="w-[90%] max-w-[450px] h-[350px] md:pr-[2rem]"
         />
 
         <div className=" w-[90%] md:w-1/2">
-          <h2 className="text-principal text-subtitleMobile md:text-subtitle font-bold mb-12">
+          <h2 className="leading-[15px] text-principal text-subtitleMobile md:text-subtitle font-bold mb-10">
             nossa missão
           </h2>
-          <p className="text-lg font-medium mb-8 leading-6">
-            A The Why Store nasceu em cima de pelo menos duas crenças:
-          </p>
           <p className="text-lg font-medium mb-8 leading-6">
             1) Para nós, uma roupa bonita não está autorizada a causar danos ao
             planeta. Assim como uma roupa sustentável não tem que,
