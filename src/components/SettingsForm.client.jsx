@@ -135,7 +135,7 @@ export default function SettingsForm() {
 
       <button
         onClick={onClickToDelete}
-        className="px-8 py-2 m-auto my-20 text-white font-bold w-fit cursor-pointer bg-black rounded-[38px]"
+        className="px-8 py-2 m-auto mb-20 text-white font-bold w-fit cursor-pointer bg-black rounded-[38px]"
       >
         cancelar conta
       </button>
