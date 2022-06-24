@@ -46,6 +46,8 @@ export default function SettingsForm() {
 
     const user = auth.currentUser;
 
+    console.log(user);
+
     if (user) {
       getDataUser(user.uid);
     }
