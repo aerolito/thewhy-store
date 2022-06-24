@@ -13,7 +13,5 @@ export const getUserData = async (userId) => {
     return snap.data();
   });
 
-  console.log(userDoc);
-
   return userDoc;
 };

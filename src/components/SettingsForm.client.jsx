@@ -14,6 +14,7 @@ import {app} from '../configs/firebase';
 import {getUserData} from '../services/getUserData';
 import handleDeleteUser from '../services/handleDeleteUser';
 import {handleSigout} from '../services/handleSignout';
+import {sleep} from '../utils/sleep';
 
 export default function SettingsForm() {
   const [, setIsWishlistModalOpen] = useAtom(isWishlistModalOpenAtom);
@@ -25,33 +26,34 @@ export default function SettingsForm() {
   const [birthdate, setBirthdate] = useState('');
   const [cpf, setCpf] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
+  const [isLoading, setIsLoading] = useState(true);
 
-  const auth = getAuth(app);
   const navigate = useNavigate();
+  const auth = getAuth(app);
 
-  const getDataUser = async (id) => {
+  const getDataUser = async () => {
+    const auth = getAuth(app);
+    await sleep(2000);
+    const id = auth.currentUser.uid;
+
     await getUserData(id)?.then((data) => {
-      if (!data) return;
+      if (!data) return setIsLoading(false);
 
       setBirthdate(data[0]);
       setUserDisplayName(data[1]);
       setCpf(data[3]);
       setPhoneNumber(data[4]);
     });
+
+    setIsLoading(false);
   };
 
   useEffect(() => {
     setIsWishlistModalOpen(false);
     setIsSettingsModalOpen(false);
 
-    const user = auth.currentUser;
-
-    console.log(user);
-
-    if (user) {
-      getDataUser(user.uid);
-    }
-  }, [auth.currentUser]);
+    getDataUser();
+  }, []);
 
   const onClickToDelete = async () => {
     handleDeleteUser(auth);
@@ -136,10 +138,13 @@ export default function SettingsForm() {
       </div>
 
       <button
+        disabled={isLoading}
         onClick={onClickToDelete}
-        className="px-8 py-2 m-auto mb-20 text-white font-bold w-fit cursor-pointer bg-black rounded-[38px]"
+        className={` ${
+          isLoading && 'opacity-30 cursor-default'
+        } px-8 py-2 m-auto mb-20 text-white font-bold w-fit cursor-pointer bg-black rounded-[38px]`}
       >
-        cancelar conta
+        {isLoading ? '...' : 'cancelar conta'}
       </button>
     </div>
   );
