@@ -142,7 +142,7 @@ export default function SignUpForm() {
 
       <button
         onClick={onClickToSign}
-        className="px-8 py-2 m-auto mb-20 text-white font-bold w-fit cursor-pointer bg-black rounded-[38px]"
+        className="px-8 py-2 m-auto mt-8 mb-20 text-white font-bold w-fit cursor-pointer bg-black rounded-[38px]"
       >
         feito!
       </button>
