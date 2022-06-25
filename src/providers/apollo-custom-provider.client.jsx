@@ -7,10 +7,10 @@ import {
 } from '@apollo/client';
 
 export const client = new ApolloClient({
-  uri: import.meta.env.VITE_URI,
+  uri: process.env.VITE_URI,
   cache: new InMemoryCache(),
   headers: {
-    'X-Shopify-Storefront-Access-Token': import.meta.env.VITE_STOREFRONT_TOKEN,
+    'X-Shopify-Storefront-Access-Token': process.env.VITE_STOREFRONT_TOKEN,
   },
 });
 

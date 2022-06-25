@@ -4,7 +4,7 @@ import {createServer as createViteDevServer} from 'vite';
 
 export async function startHydrogenServer() {
   // @ts-ignore
-  const app = import.meta.env.WATCH
+  const app = process.env.WATCH
     ? await createDevServer()
     : await createNodeServer();
 
