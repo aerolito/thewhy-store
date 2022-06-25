@@ -28,6 +28,6 @@ function App({routes}) {
   );
 }
 
-const routes = process.globEager('./routes/**/*.server.[jt](s|sx)');
+const routes = import.meta.globEager('./routes/**/*.server.[jt](s|sx)');
 
 export default renderHydrogen(App, {shopifyConfig, routes});
