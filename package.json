@@ -53,6 +53,7 @@
     "react-router-dom": "^6.3.0",
     "react-toastify": "^9.0.1",
     "react-topbar-progress-indicator": "^4.1.1",
-    "serve-static": "^1.14.1"
+    "serve-static": "^1.14.1",
+    "vite-plugin-environment": "^1.1.1"
   }
 }

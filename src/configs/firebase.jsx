@@ -5,12 +5,12 @@ import {getFirestore} from 'firebase/firestore';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: 'AIzaSyDwiMkjx626obIffY8OV7DcFkQgxsQagCI',
-  authDomain: 'o-porque-netlify.firebaseapp.com',
-  projectId: 'o-porque-netlify',
-  storageBucket: 'o-porque-netlify.appspot.com',
-  messagingSenderId: '459058884984',
-  appId: '1:459058884984:web:471121ab1badaaeea9588d',
+  apiKey: import.meta.env.VITE_API_KEY,
+  authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_APP_ID,
 };
 
 // Initialize Firebase
