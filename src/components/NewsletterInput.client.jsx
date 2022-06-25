@@ -1,10 +1,26 @@
 import {useState} from 'react';
+import {useAtom} from 'jotai';
+import {isWishlistModalOpenAtom} from '../atoms/is-wishlist-modal-open';
+import {accessTokenAtom} from '../atoms/user';
 import {handleNewsletterMailling} from '../services/handleNewsletterMailling';
+import {signStateAtom} from './Sign/atoms/sign-state';
+import {toast} from './Toast.client';
 
 export default function NewsletterInput() {
+  const [, setIsWishlistModalOpen] = useAtom(isWishlistModalOpenAtom);
+  const [accessToken] = useAtom(accessTokenAtom);
+  const [, setSignState] = useAtom(signStateAtom);
   const [email, setEmail] = useState('');
 
-  // verificar se o user já está cadastrado e disparar popups aqui
+  const onClickToNewsletter = async () => {
+    if (!accessToken) {
+      setIsWishlistModalOpen(true);
+      setSignState('signin');
+      return;
+    }
+
+    await handleNewsletterMailling(email);
+  };
 
   return (
     <>
@@ -12,17 +28,18 @@ export default function NewsletterInput() {
         <input
           className="text-principal text-smallText rounded-full px-4 pr-12 h-[34px]"
           placeholder="Insira seu e-mail"
+          type="email"
           onChange={(e) => setEmail(e.target.value)}
         />
         <img
-          onClick={() => handleNewsletterMailling(email)}
+          onClick={onClickToNewsletter}
           className="absolute right-[40px] md:right-[24px] md:right-[16px] top-[5px] cursor-pointer bg-white"
           src="/send.svg"
           width="24px"
           height="24px"
           onKeyDown={(e) => {
             if (e.key === 'Enter') {
-              handleNewsletterMailling(email);
+              onClickToNewsletter();
             }
           }}
         />

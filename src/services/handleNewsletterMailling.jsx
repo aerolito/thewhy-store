@@ -4,7 +4,10 @@ import {database} from '../configs/firebase';
 
 export const handleNewsletterMailling = async (email) => {
   try {
-    if (!email) return toast.warning(`Você precisa digitar o seu email`);
+    if (!email) {
+      toast.warning(`Você precisa digitar o seu email`);
+      return false;
+    }
 
     const newsletterMailling = doc(database, 'newsletter-mailling', email);
 
@@ -13,7 +16,9 @@ export const handleNewsletterMailling = async (email) => {
     };
 
     await setDoc(newsletterMailling, data);
-  } catch {
-    return false;
+
+    toast.success(`Você foi inscrito na newsletter`);
+  } catch (error) {
+    toast.error(`Erro ao assinar a newsletter`);
   }
 };

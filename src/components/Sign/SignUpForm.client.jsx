@@ -116,7 +116,7 @@ export default function SignUpForm() {
               DATA DE NASCIMENTO:
             </label>
             <input
-              className="text-principal cursor-default text-text border-black border-[1px] rounded-full mb-12 w-[350px] py-2 px-4"
+              className="text-principal text-text border-black border-[1px] rounded-full mb-12 w-[350px] py-2 px-4"
               type="text"
               placeholder="Preencha com sua Data de Nascimento"
               onChange={(e) => setBirthdate(e.target.value)}
