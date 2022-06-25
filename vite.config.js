@@ -1,11 +1,17 @@
 import {defineConfig, loadEnv} from 'vite';
 import hydrogen from '@shopify/hydrogen/plugin';
 import netlifyPlugin from '@netlify/hydrogen-platform/plugin';
-import shopifyConfig from './shopify.config';
 
 // https://vitejs.dev/config/
 export default defineConfig(({mode}) => {
   const env = loadEnv(mode, process.cwd(), '');
+
+  const shopifyConfig = {
+    storeDomain: env.STORE_DOMAIN,
+    storefrontToken: env.STOREFRONT_TOKEN,
+    storefrontApiVersion: '2022-04',
+  };
+
   return {
     plugins: [hydrogen(shopifyConfig), netlifyPlugin()],
     optimizeDeps: {include: ['@headlessui/react']},

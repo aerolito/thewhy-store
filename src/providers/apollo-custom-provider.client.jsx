@@ -16,6 +16,5 @@ export const client = new ApolloClient({
 });
 
 export function ApolloCustomProvider({children}) {
-  console.log();
   return <ApolloProvider client={client}>{children}</ApolloProvider>;
 }
