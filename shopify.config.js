@@ -1,5 +1,5 @@
 export default {
   storeDomain: 'thewhy-store.myshopify.com',
-  storefrontToken: import.meta.env.VITE_STOREFRONT_ACCESS_TOKEN,
+  storefrontToken: '8da66e4bcd6184accb29e483d1e1403b',
   storefrontApiVersion: '2022-04',
 };
