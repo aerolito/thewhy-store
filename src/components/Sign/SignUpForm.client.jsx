@@ -71,7 +71,7 @@ export default function SignUpForm() {
             <input
               className="text-principal text-text border-black border-[1px] rounded-full mb-12 max-w-[350px] py-2 px-4"
               type="email"
-              placeholder="Preencha com seu email"
+              placeholder="exemplo@gmail.com"
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
@@ -84,7 +84,7 @@ export default function SignUpForm() {
             <input
               className="text-principal text-text border-black border-[1px] rounded-full mb-12 max-w-[350px] py-2 px-4"
               type="password"
-              placeholder="Preencha com sua senha"
+              placeholder="Preencha com uma senha"
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
@@ -109,7 +109,7 @@ export default function SignUpForm() {
             <input
               className="text-principal text-text border-black border-[1px] rounded-full mb-12 max-w-[350px] py-2 px-4"
               type="text"
-              placeholder="Preencha com seu telefone"
+              placeholder="Telefone (apenas números)"
               onChange={(e) => setPhoneNumber(e.target.value)}
             />
           </div>
@@ -121,7 +121,7 @@ export default function SignUpForm() {
             <input
               className="text-principal text-text border-black border-[1px] rounded-full mb-12 max-w-[350px] py-2 px-4"
               type="text"
-              placeholder="Preencha com sua Data de Nascimento"
+              placeholder="Data de Nascimento (11/11/1111)"
               onChange={(e) => setBirthdate(e.target.value)}
             />
           </div>

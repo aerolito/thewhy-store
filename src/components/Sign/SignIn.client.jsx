@@ -15,20 +15,23 @@ export default function SignIn() {
   const [, setAccessToken] = useAtom(accessTokenAtom);
   const [, setUserId] = useAtom(userIdAtom);
   const [, setSignState] = useAtom(signStateAtom);
+  const [isLoading, setIsLoading] = useState(false);
 
   const auth = getAuth(app);
   const navigate = useNavigate();
 
   const onClickToSign = async () => {
+    setIsLoading(true);
     const user = await handleSignin(auth, email, password);
 
-    if (!user) return;
+    if (!user) return setIsLoading(false);
 
     setIsWishlistModalOpen(false);
 
     setAccessToken(user.token);
     setUserId(user.userId);
 
+    setIsLoading(false);
     navigate('/', {replace: true});
   };
 
@@ -84,7 +87,7 @@ export default function SignIn() {
           type="button"
           className="border-2 m-auto mt-2 font-bold w-fit rounded-full text-[14px] border-black p-1.5 px-[30px] hover:opacity-80"
         >
-          confirmar
+          {isLoading ? '...' : 'confirmar'}
         </button>
 
         <span className="cursor-pointer" onClick={() => setSignState('reset')}>
