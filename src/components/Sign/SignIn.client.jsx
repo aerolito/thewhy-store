@@ -1,11 +1,6 @@
 import {useState} from 'react';
 import {useAtom} from 'jotai';
-import {
-  accessTokenAtom,
-  userDisplayNameAtom,
-  userEmailAtom,
-  userIdAtom,
-} from '../../atoms/user';
+import {accessTokenAtom, userIdAtom} from '../../atoms/user';
 import {handleSignin} from '../../services/handleSignin';
 import {signStateAtom} from './atoms/sign-state';
 import {isWishlistModalOpenAtom} from '../../atoms/is-wishlist-modal-open';
@@ -19,8 +14,6 @@ export default function SignIn() {
   const [password, setPassword] = useState('');
   const [, setAccessToken] = useAtom(accessTokenAtom);
   const [, setUserId] = useAtom(userIdAtom);
-  const [, setUserDisplayName] = useAtom(userDisplayNameAtom);
-  const [, setUserEmail] = useAtom(userEmailAtom);
   const [, setSignState] = useAtom(signStateAtom);
 
   const auth = getAuth(app);
@@ -35,9 +28,6 @@ export default function SignIn() {
 
     setAccessToken(user.token);
     setUserId(user.userId);
-
-    setUserDisplayName(user.userDisplayName);
-    setUserEmail(user.userEmail);
 
     navigate('/', {replace: true});
   };

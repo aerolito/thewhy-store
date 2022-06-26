@@ -4,12 +4,7 @@ import {useAtom} from 'jotai';
 import {useEffect, useState} from 'react';
 import {isSettingsModalOpenAtom} from '../atoms/is-settings-modal-open';
 import {isWishlistModalOpenAtom} from '../atoms/is-wishlist-modal-open';
-import {
-  accessTokenAtom,
-  userDisplayNameAtom,
-  userEmailAtom,
-  userIdAtom,
-} from '../atoms/user';
+import {accessTokenAtom, userIdAtom} from '../atoms/user';
 import {app} from '../configs/firebase';
 import {getUserData} from '../services/getUserData';
 import handleDeleteUser from '../services/handleDeleteUser';
@@ -21,8 +16,8 @@ export default function SettingsForm() {
   const [, setIsSettingsModalOpen] = useAtom(isSettingsModalOpenAtom);
   const [, setAccessToken] = useAtom(accessTokenAtom);
   const [, setUserId] = useAtom(userIdAtom);
-  const [userDisplayName, setUserDisplayName] = useAtom(userDisplayNameAtom);
-  const [userEmail, setUserEmail] = useAtom(userEmailAtom);
+  const [userDisplayName, setUserDisplayName] = useState('');
+  const [userEmail, setUserEmail] = useState('');
   const [birthdate, setBirthdate] = useState('');
   const [cpf, setCpf] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
@@ -39,10 +34,11 @@ export default function SettingsForm() {
     await getUserData(id)?.then((data) => {
       if (!data) return setIsLoading(false);
 
-      setBirthdate(data[0]);
-      setUserDisplayName(data[1]);
-      setCpf(data[3]);
-      setPhoneNumber(data[4]);
+      setUserDisplayName(data?.displayName);
+      setUserEmail(data?.email);
+      setBirthdate(data?.birthDate);
+      setCpf(data?.cpf);
+      setPhoneNumber(data?.phoneNumber);
     });
 
     setIsLoading(false);

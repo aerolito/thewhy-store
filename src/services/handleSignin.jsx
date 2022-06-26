@@ -8,7 +8,6 @@ export async function handleSignin(auth, email, password) {
       const userId = userCredential?.user?.uid;
       const userDisplayName = userCredential?.user?.displayName;
       const userEmail = userCredential?.user?.email;
-
       const verified = userCredential?.user?.emailVerified;
 
       if (!!!verified) {

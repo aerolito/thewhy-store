@@ -17,8 +17,9 @@ export const handleNewsletterMailling = async (email) => {
 
     await setDoc(newsletterMailling, data);
 
-    toast.success(`Você foi inscrito na newsletter`);
+    return true;
   } catch (error) {
     toast.error(`Erro ao assinar a newsletter`);
+    return false;
   }
 };

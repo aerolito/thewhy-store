@@ -1767,6 +1767,11 @@ domutils@^1.5.1:
     dom-serializer "0"
     domelementtype "1"
 
+drange@^1.0.2:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/drange/-/drange-1.1.1.tgz#b2aecec2aab82fcef11dbbd7b9e32b83f8f6c0b8"
+  integrity sha512-pYxfDYpued//QpnLIm4Avk7rsNtAtQkUES2cwAYSvD/wd2pKD71gN2Ebj3e7klzXwjocvE8c5vx/1fxwpqmSxA==
+
 ee-first@1.1.1:
   version "1.1.1"
   resolved "https://registry.npmjs.org/ee-first/-/ee-first-1.1.1.tgz"
@@ -2974,6 +2979,14 @@ jpeg-js@0.4.3:
   resolved "https://registry.npmjs.org/jpeg-js/-/jpeg-js-0.4.3.tgz"
   integrity sha512-ru1HWKek8octvUHFHvE5ZzQ1yAsJmIvRdGWvSoKV52XKyuyYA437QWDttXT8eZXDSbuMpHlLzPDZUPd6idIz+Q==
 
+js-brasil@^2.1.0:
+  version "2.5.3"
+  resolved "https://registry.yarnpkg.com/js-brasil/-/js-brasil-2.5.3.tgz#e1a857509b235d7ff97786fd96e1ba451de3e5bd"
+  integrity sha512-fpnbMJ+l0klijof270+Z7oDoKooUfW6JdaUciV9jFtpwF7VG7FAl8RzsFa8iz9F5Ml9yg0YTFJcLrSXBw+IWbg==
+  dependencies:
+    randexp "^0.5.3"
+    text-mask-addons "^3.8.0"
+
 js-cookie@^2.2.1:
   version "2.2.1"
   resolved "https://registry.npmjs.org/js-cookie/-/js-cookie-2.2.1.tgz"
@@ -3974,6 +3987,14 @@ quick-lru@^5.1.1:
   resolved "https://registry.npmjs.org/quick-lru/-/quick-lru-5.1.1.tgz"
   integrity sha512-WuyALRjWPDGtt/wzJiadO5AXY+8hZ80hVpe6MyivgraREW751X3SbhRvG3eLKOYN+8VEvqLcf3wdnt44Z4S4SA==
 
+randexp@^0.5.3:
+  version "0.5.3"
+  resolved "https://registry.yarnpkg.com/randexp/-/randexp-0.5.3.tgz#f31c2de3148b30bdeb84b7c3f59b0ebb9fec3738"
+  integrity sha512-U+5l2KrcMNOUPYvazA3h5ekF80FHTUG+87SEAmHZmolh1M+i/WyTCxVzmi+tidIa1tM4BSe8g2Y/D3loWDjj+w==
+  dependencies:
+    drange "^1.0.2"
+    ret "^0.2.0"
+
 range-parser@~1.2.1:
   version "1.2.1"
   resolved "https://registry.npmjs.org/range-parser/-/range-parser-1.2.1.tgz"
@@ -3996,6 +4017,13 @@ react-cookie-consent@^7.4.1:
   dependencies:
     js-cookie "^2.2.1"
     prop-types "^15.7.2"
+
+react-cpf-cnpj-input@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/react-cpf-cnpj-input/-/react-cpf-cnpj-input-1.0.0.tgz#fe7b24b27eede852a43b61f8a0c8fbac276eb916"
+  integrity sha512-zNSGfAN2H5bUcVa/sOVweyxAxc5barIB2L0p1v5OhpkrOEegTVI61hQAGe94qUdR8s2QUKXdVetzUI5aAGTfTQ==
+  dependencies:
+    js-brasil "^2.1.0"
 
 react-device-detect@^2.2.2:
   version "2.2.2"
@@ -4233,6 +4261,11 @@ resolve@^2.0.0-next.3:
   dependencies:
     is-core-module "^2.2.0"
     path-parse "^1.0.6"
+
+ret@^0.2.0:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/ret/-/ret-0.2.2.tgz#b6861782a1f4762dce43402a71eb7a283f44573c"
+  integrity sha512-M0b3YWQs7R3Z917WRQy1HHA7Ba7D8hvZg6UE5mLykJxQVE2ju0IXbGlaHPPlkY+WN7wFP+wUMXmBFA0aV6vYGQ==
 
 retry@^0.12.0:
   version "0.12.0"
@@ -4768,6 +4801,11 @@ tailwindcss@^3.0.0:
     postcss-value-parser "^4.2.0"
     quick-lru "^5.1.1"
     resolve "^1.22.0"
+
+text-mask-addons@^3.8.0:
+  version "3.8.0"
+  resolved "https://registry.yarnpkg.com/text-mask-addons/-/text-mask-addons-3.8.0.tgz#17b61ef665a4f36811f2ea1f01a223b4be61ab26"
+  integrity sha512-VSZSdc/tKn4zGxgpJ+uNBzoW1t472AoAFIlbw1K7hSNXz0DfSBYDJNRxLqgxOfWw1BY2z6DQpm7g0sYZn5qLpg==
 
 text-table@^0.2.0:
   version "0.2.0"

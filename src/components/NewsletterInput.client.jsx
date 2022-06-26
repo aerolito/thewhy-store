@@ -19,7 +19,11 @@ export default function NewsletterInput() {
       return;
     }
 
-    await handleNewsletterMailling(email);
+    const res = await handleNewsletterMailling(email);
+
+    if (!res) return;
+
+    toast.success(`Você foi inscrito na newsletter`);
   };
 
   return (

@@ -1,11 +1,6 @@
 import {useAtom} from 'jotai';
 import {handleSigout} from '../services/handleSignout';
-import {
-  accessTokenAtom,
-  userDisplayNameAtom,
-  userEmailAtom,
-  userIdAtom,
-} from '../atoms/user';
+import {accessTokenAtom, userIdAtom} from '../atoms/user';
 import {isSettingsModalOpenAtom} from '../atoms/is-settings-modal-open';
 import {useNavigate} from '@shopify/hydrogen/client';
 import {getAuth} from 'firebase/auth';
@@ -15,8 +10,6 @@ export default function SettingsDecision() {
   const [, setIsSettingsModalOpen] = useAtom(isSettingsModalOpenAtom);
   const [, setAccessToken] = useAtom(accessTokenAtom);
   const [, setUserId] = useAtom(userIdAtom);
-  const [, setUserDisplayName] = useAtom(userDisplayNameAtom);
-  const [, setUserEmail] = useAtom(userEmailAtom);
 
   const auth = getAuth(app);
   const navigate = useNavigate();
@@ -28,8 +21,6 @@ export default function SettingsDecision() {
 
     setAccessToken('');
     setUserId('');
-    setUserDisplayName('');
-    setUserEmail('');
 
     setIsSettingsModalOpen(false);
     navigate('/', {replace: true});

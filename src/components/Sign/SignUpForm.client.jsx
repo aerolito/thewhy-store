@@ -6,6 +6,7 @@ import {isWishlistModalOpenAtom} from '../../atoms/is-wishlist-modal-open';
 import {app} from '../../configs/firebase';
 import {handleSignup} from '../../services/handleSignup';
 import {toast} from '../Toast.client';
+import CpfCnpjInput from 'react-cpf-cnpj-input';
 
 export default function SignUpForm() {
   const [name, setName] = useState('');
@@ -90,11 +91,13 @@ export default function SignUpForm() {
         </div>
         <div>
           <div className="flex flex-col gap-[1rem] text-left">
-            <label className="text-principal font-bold text-text">CPF:</label>
-            <input
+            <label className="text-principal font-bold text-text">
+              CPF / CNPJ:
+            </label>
+            <CpfCnpjInput
+              value={cpf}
               className="text-principal text-text border-black border-[1px] rounded-full mb-12 w-[350px] py-2 px-4"
-              type="text"
-              placeholder="Preencha com seu CPF"
+              placeholder="Preencha com seu cpf"
               onChange={(e) => setCpf(e.target.value)}
             />
           </div>

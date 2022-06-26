@@ -1,23 +1,12 @@
-import {collection, getDocs, query, where} from 'firebase/firestore';
+import {doc, getDoc} from 'firebase/firestore';
 import {database} from '../configs/firebase';
 
 export const getUserData = async (userId) => {
-  console.log('userId', userId);
-  const userDataQuery = query(
-    collection(database, 'users'),
-    where('uid', '==', userId),
-  );
+  const docRef = doc(database, 'users', userId);
 
-  console.log('userDataQuery', userDataQuery);
-  const querySnapshot = await getDocs(userDataQuery);
+  const docSnap = await getDoc(docRef);
 
-  console.log('querySnapshot', querySnapshot);
+  if (!docSnap || !docSnap.data()) return false;
 
-  const userDoc = querySnapshot.forEach((snap) => {
-    return snap.data();
-  });
-
-  console.log('userDoc', userDoc);
-
-  return userDoc;
+  return docSnap.data();
 };
