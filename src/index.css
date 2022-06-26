@@ -38,7 +38,7 @@ svg {
 html {
   scroll-padding-top: 5rem;
   overflow-y: auto !important;
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
 }
 
 model-viewer::part(default-progress-mask) {

@@ -51,14 +51,14 @@ export default function SignUpForm() {
 
   return (
     <div className="text-center flex flex-col justify-center items-left">
-      <div className="flex w-full justify-between">
+      <div className="flex w-full justify-between flex-col md:flex-row">
         <div>
           <div className="flex flex-col gap-[1rem] text-left">
             <label className="text-principal font-bold text-text">
               NOME COMPLETO:
             </label>
             <input
-              className="text-principal text-text border-black border-[1px] rounded-full mb-12 w-[350px] py-2 px-4"
+              className="text-principal text-text border-black border-[1px] rounded-full mb-12 max-w-[350px] py-2 px-4"
               type="text"
               placeholder="Preencha com seu nome"
               onChange={(e) => setName(e.target.value)}
@@ -69,7 +69,7 @@ export default function SignUpForm() {
             <label className="text-principal font-bold text-text">EMAIL:</label>
 
             <input
-              className="text-principal text-text border-black border-[1px] rounded-full mb-12 w-[350px] py-2 px-4"
+              className="text-principal text-text border-black border-[1px] rounded-full mb-12 max-w-[350px] py-2 px-4"
               type="email"
               placeholder="Preencha com seu email"
               onChange={(e) => setEmail(e.target.value)}
@@ -96,7 +96,7 @@ export default function SignUpForm() {
             </label>
             <CpfCnpjInput
               value={cpf}
-              className="text-principal text-text border-black border-[1px] rounded-full mb-12 w-[350px] py-2 px-4"
+              className="text-principal text-text border-black border-[1px] rounded-full mb-12 max-w-[350px] py-2 px-4"
               placeholder="Preencha com seu cpf"
               onChange={(e) => setCpf(e.target.value)}
             />
@@ -107,7 +107,7 @@ export default function SignUpForm() {
               TELEFONE:
             </label>
             <input
-              className="text-principal text-text border-black border-[1px] rounded-full mb-12 w-[350px] py-2 px-4"
+              className="text-principal text-text border-black border-[1px] rounded-full mb-12 max-w-[350px] py-2 px-4"
               type="text"
               placeholder="Preencha com seu telefone"
               onChange={(e) => setPhoneNumber(e.target.value)}
@@ -119,7 +119,7 @@ export default function SignUpForm() {
               DATA DE NASCIMENTO:
             </label>
             <input
-              className="text-principal text-text border-black border-[1px] rounded-full mb-12 w-[350px] py-2 px-4"
+              className="text-principal text-text border-black border-[1px] rounded-full mb-12 max-w-[350px] py-2 px-4"
               type="text"
               placeholder="Preencha com sua Data de Nascimento"
               onChange={(e) => setBirthdate(e.target.value)}
