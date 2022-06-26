@@ -1,11 +1,11 @@
 import {flattenConnection, useShopQuery} from '@shopify/hydrogen';
 import gql from 'graphql-tag';
-import Tags from '../../components/Tags.server';
-import Filter from '../../components/Filter.client';
-import ProductList from '../../components/ProductList.client';
+import Tags from '../../components/Tags/Tags.server';
+import Filter from '../../components/Products/Filter.client';
+import ProductList from '../../components/Products/ProductList.client';
 import {Suspense} from 'react';
-import {BoxFallback} from '../../components/BoxFallback.server';
-import {Slogan} from '../../components/Slogan.server';
+import {BoxFallback} from '../../components/Layout/BoxFallback.server';
+import {Slogan} from '../../components/Layout/Slogan.server';
 
 export default function ProductsPage(req) {
   const params = req?.request?.preloadURL;

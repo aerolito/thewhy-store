@@ -9,7 +9,7 @@ import gql from 'graphql-tag';
 import Header from './Header.client';
 import Footer from './Footer.server';
 import {Suspense} from 'react';
-import CustomToastContainer from './Toast.client';
+import CustomToastContainer from '../Popups/Toast.client';
 import {BackButton} from './BackButton.client';
 
 /**

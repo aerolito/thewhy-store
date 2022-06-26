@@ -1,5 +1,5 @@
 import {signOut} from 'firebase/auth';
-import {toast} from '../components/Toast.client';
+import {toast} from '../components/Popups/Toast.client';
 
 export async function handleSigout(auth) {
   const response = signOut(auth)

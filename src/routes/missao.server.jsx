@@ -1,4 +1,4 @@
-import {Slogan} from '../components/Slogan.server';
+import {Slogan} from '../components/Layout/Slogan.server';
 
 export default function MissionPage() {
   return (

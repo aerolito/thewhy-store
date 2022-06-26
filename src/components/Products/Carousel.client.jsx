@@ -1,5 +1,5 @@
 import CarouselGallery from 'react-gallery-carousel';
-import '../../node_modules/react-gallery-carousel/dist/index.css';
+import '../../../node_modules/react-gallery-carousel/dist/index.css';
 
 export default function Carousel({images}) {
   return (

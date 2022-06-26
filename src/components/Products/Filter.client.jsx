@@ -1,7 +1,7 @@
 import {useAtom} from 'jotai';
-import {productListAtom} from '../atoms/product-list';
-import {CollectionFilterSelectedAtom} from '../atoms/collection-filter-selected';
-import {BrandFilterSelectedAtom} from '../atoms/brand-filter-selected';
+import {productListAtom} from '../../atoms/product-list';
+import {CollectionFilterSelectedAtom} from '../../atoms/collection-filter-selected';
+import {BrandFilterSelectedAtom} from '../../atoms/brand-filter-selected';
 
 export default function Filter({options, products, type, label}) {
   const [_, setProductList] = useAtom(productListAtom);

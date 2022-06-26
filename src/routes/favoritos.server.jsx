@@ -1,5 +1,5 @@
-import Wishlist from '../components/Wishlist.client';
-import {Slogan} from '../components/Slogan.server';
+import Wishlist from '../components/Products/Wishlist.client';
+import {Slogan} from '../components/Layout/Slogan.server';
 
 export default function WishlistPage() {
   return (

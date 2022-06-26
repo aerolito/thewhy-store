@@ -1,9 +1,9 @@
 import {useAtom} from 'jotai';
 import {useEffect} from 'react';
-import {BrandFilterSelectedAtom} from '../atoms/brand-filter-selected';
-import {CollectionFilterSelectedAtom} from '../atoms/collection-filter-selected';
-import {productListAtom} from '../atoms/product-list';
-import ProductCard from '../components/ProductCard.client';
+import {BrandFilterSelectedAtom} from '../../atoms/brand-filter-selected';
+import {CollectionFilterSelectedAtom} from '../../atoms/collection-filter-selected';
+import {productListAtom} from '../../atoms/product-list';
+import ProductCard from '../../components/Products/ProductCard.client';
 
 export default function ProductList({products}) {
   const [productList, setProductList] = useAtom(productListAtom);

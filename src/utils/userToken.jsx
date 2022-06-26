@@ -1,5 +1,5 @@
 import {useAtom} from 'jotai';
-import {accessTokenAtom} from '../atoms/user';
+import {accessTokenAtom} from '../../atoms/user';
 
 export const userToken = () => {
   const [accessToken] = useAtom(accessTokenAtom);

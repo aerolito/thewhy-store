@@ -1,7 +1,7 @@
 import {flattenConnection, useShopQuery} from '@shopify/hydrogen';
 import gql from 'graphql-tag';
-import Post from '../../components/Post.server';
-import {Slogan} from '../../components/Slogan.server';
+import Post from '../../components/Home/Post.server';
+import {Slogan} from '../../components/Layout/Slogan.server';
 
 export default function Contents(req) {
   const {data} = useShopQuery({

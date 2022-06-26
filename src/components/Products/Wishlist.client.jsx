@@ -1,6 +1,6 @@
 import {useAtom} from 'jotai';
-import {wishlistAtom} from '../atoms/wishlist';
-import ProductCard from '../components/ProductCard.client';
+import {wishlistAtom} from '../../atoms/wishlist';
+import ProductCard from './ProductCard.client';
 
 export default function Wishlist() {
   const [wishlist] = useAtom(wishlistAtom);

@@ -2,14 +2,14 @@ import {useState, useEffect} from 'react';
 import Navigation from './Navigation.client';
 import {Link} from '@shopify/hydrogen/client';
 import {useNavigate} from '@shopify/hydrogen/client';
-import {isWishlistModalOpenAtom} from '../atoms/is-wishlist-modal-open';
+import {isWishlistModalOpenAtom} from '../../atoms/is-wishlist-modal-open';
 import {useAtom} from 'jotai';
-import Sign from './Sign/index.client';
-import {accessTokenAtom, userIdAtom} from '../atoms/user';
-import {getWishlist} from '../services/getWishlist';
-import {wishlistAtom} from '../atoms/wishlist';
-import SettingsDecision from './SettingsDecision.client';
-import {isSettingsModalOpenAtom} from '../atoms/is-settings-modal-open';
+import Sign from '../Sign/index.client';
+import {accessTokenAtom, userIdAtom} from '../../atoms/user';
+import {getWishlist} from '../../services/getWishlist';
+import {wishlistAtom} from '../../atoms/wishlist';
+import SettingsDecision from '../Sign/SettingsDecision.client';
+import {isSettingsModalOpenAtom} from '../../atoms/is-settings-modal-open';
 
 export default function Header({collections, storeName}) {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);

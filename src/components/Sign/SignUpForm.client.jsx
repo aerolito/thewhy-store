@@ -5,7 +5,7 @@ import {useState, useEffect} from 'react';
 import {isWishlistModalOpenAtom} from '../../atoms/is-wishlist-modal-open';
 import {app} from '../../configs/firebase';
 import {handleSignup} from '../../services/handleSignup';
-import {toast} from '../Toast.client';
+import {toast} from '../Popups/Toast.client';
 import CpfCnpjInput from 'react-cpf-cnpj-input';
 
 export default function SignUpForm() {

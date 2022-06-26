@@ -1,6 +1,6 @@
 import {useRef, useState} from 'react';
 import emailjs from '@emailjs/browser';
-import {toast} from './Toast.client';
+import {toast} from '../Popups/Toast.client';
 
 export default function ContactForm() {
   const [email, setEmail] = useState('');

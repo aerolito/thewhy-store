@@ -1,5 +1,5 @@
 import {createUserWithEmailAndPassword} from 'firebase/auth';
-import {toast} from './Toast.client';
+import {toast} from '../components/Popups/Toast.client';
 import {doc, setDoc} from 'firebase/firestore';
 import {database} from '../configs/firebase';
 

@@ -1,5 +1,7 @@
 import {Link} from '@shopify/hydrogen';
+import {Suspense} from 'react';
 import NewsletterInput from './NewsletterInput.client';
+import {BoxFallback} from './BoxFallback.server';
 
 export default function Footer() {
   return (
@@ -31,9 +33,9 @@ export default function Footer() {
               ASSINAR NEWSLETTER
             </p>
 
-            {/* <Suspense fallback={<BoxFallback />}> */}
-            <NewsletterInput />
-            {/* </Suspense> */}
+            <Suspense fallback={<BoxFallback />}>
+              <NewsletterInput />
+            </Suspense>
           </div>
           <div>
             <p className="text-text mt-12 md:mt-0 font-bold uppercase mb-8  text-white">

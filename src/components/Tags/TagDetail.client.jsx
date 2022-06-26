@@ -1,6 +1,6 @@
 import {useAtom} from 'jotai';
 import {useEffect} from 'react';
-import {CollectionPageSelectedAtom} from '../atoms/collection-page-selected';
+import {CollectionPageSelectedAtom} from '../../atoms/collection-page-selected';
 import {isMobile} from 'react-device-detect';
 
 export default function TagDetail({collections}) {

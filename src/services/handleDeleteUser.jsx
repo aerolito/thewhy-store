@@ -1,6 +1,6 @@
 import {deleteUser} from 'firebase/auth';
 import {deleteDoc, doc} from 'firebase/firestore';
-import {toast} from '../components/Toast.client';
+import {toast} from '../components/Popups/Toast.client';
 import {database} from '../configs/firebase';
 
 export default function handleDeleteUser(auth) {
