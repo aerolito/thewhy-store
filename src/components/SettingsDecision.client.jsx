@@ -5,11 +5,13 @@ import {isSettingsModalOpenAtom} from '../atoms/is-settings-modal-open';
 import {useNavigate} from '@shopify/hydrogen/client';
 import {getAuth} from 'firebase/auth';
 import {app} from '../configs/firebase';
+import {wishlistAtom} from '../atoms/wishlist';
 
 export default function SettingsDecision() {
   const [, setIsSettingsModalOpen] = useAtom(isSettingsModalOpenAtom);
   const [, setAccessToken] = useAtom(accessTokenAtom);
   const [, setUserId] = useAtom(userIdAtom);
+  const [, setWishlist] = useAtom(wishlistAtom);
 
   const auth = getAuth(app);
   const navigate = useNavigate();
@@ -21,6 +23,7 @@ export default function SettingsDecision() {
 
     setAccessToken('');
     setUserId('');
+    setWishlist([]);
 
     setIsSettingsModalOpen(false);
     navigate('/', {replace: true});

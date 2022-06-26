@@ -6,7 +6,7 @@ export default function Wishlist() {
   const [wishlist] = useAtom(wishlistAtom);
 
   return (
-    <div className="flex gap-x-9 gap-y-[4.5rem] flex-wrap justify-center">
+    <div className="flex gap-9 flex-wrap justify-center">
       {wishlist && wishlist?.length > 0 ? (
         wishlist?.map((product) => (
           <ProductCard key={product.id} product={product} />

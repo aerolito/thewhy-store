@@ -72,9 +72,9 @@ export default function TagDetail({collections}) {
         <h4 className="text-smallTitle text-principal font-bold">
           {collection?.title}
         </h4>
-        <p dangerouslySetInnerHTML={{__html: collection?.descriptionHtml}}>
+        <div dangerouslySetInnerHTML={{__html: collection?.descriptionHtml}}>
           {collection?.description}
-        </p>
+        </div>
       </div>
     </>
   );

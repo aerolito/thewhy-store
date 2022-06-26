@@ -85,7 +85,9 @@ export default function SignIn() {
         <button
           onClick={() => onClickToSign()}
           type="button"
-          className="border-2 m-auto mt-2 font-bold w-fit rounded-full text-[14px] border-black p-1.5 px-[30px] hover:opacity-80"
+          className={` ${
+            isLoading && 'opacity-30 cursor-default'
+          } border-2 m-auto mt-2 font-bold w-fit rounded-full text-[14px] border-black p-1.5 px-[30px] hover:opacity-80`}
         >
           {isLoading ? '...' : 'confirmar'}
         </button>

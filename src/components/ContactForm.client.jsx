@@ -49,7 +49,7 @@ export default function ContactForm() {
       <div className="flex flex-col gap-[1rem] text-left">
         <label className="text-principal font-bold text-text">E-mail</label>
         <input
-          className="text-principal text-small border-black border-[1px] rounded-full mb-12 w-[258px] py-2 px-4"
+          className="text-principal text-text border-black border-[1px] rounded-full mb-12 max-w-[350px] md:w-[350px] py-2 px-4"
           placeholder="Insira seu e-mail"
           type="email"
           name="user_email"
@@ -61,8 +61,9 @@ export default function ContactForm() {
       <div className="flex flex-col gap-[1rem] text-left">
         <label className="text-principal font-bold text-text">Mensagem</label>
         <textarea
-          className="text-principal text-small border-black border-[1px] rounded-[9px] mb-12 min-h-[200px] max-w-[458px] py-2 px-4"
+          className="text-principal text-text border-black border-[1px] rounded-[9px] mb-12 min-h-[200px] max-w-[458px] py-2 px-4"
           name="message"
+          placeholder="Insira sua mensagem"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
         />
@@ -74,7 +75,7 @@ export default function ContactForm() {
         className={` ${
           isLoading && 'opacity-30 cursor-default'
         }  px-8 py-2 mb-12 text-white font-bold w-fit cursor-pointer bg-black rounded-[38px]`}
-        value="feito!"
+        value={isLoading ? '...' : 'feito!'}
       />
     </form>
   );

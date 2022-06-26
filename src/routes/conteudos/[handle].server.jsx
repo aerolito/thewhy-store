@@ -38,10 +38,10 @@ export default function Page({params}) {
           {article?.title}
         </h2>
 
-        <p
+        <div
           className="text-text text-left text-principal mt-12 mb-[4rem]"
           dangerouslySetInnerHTML={{__html: article.contentHtml}}
-        ></p>
+        ></div>
       </div>
     </>
   );

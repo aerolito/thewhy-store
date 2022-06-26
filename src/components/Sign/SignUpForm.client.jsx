@@ -17,16 +17,20 @@ export default function SignUpForm() {
   const [cpf, setCpf] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
   const [birthdate, setBirthdate] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
 
   const auth = getAuth(app);
   const navigate = useNavigate();
 
   const onClickToSign = async () => {
+    setIsLoading(true);
     if (!name || !email || !password || !cpf || !phoneNumber) {
+      setIsLoading(false);
       return toast.error(`Nome, email e senha são obrigatórios`);
     }
 
     if (!termsAccepted) {
+      setIsLoading(false);
       return toast.error(`Aceitar os termos é obrigatório`);
     }
 
@@ -40,8 +44,12 @@ export default function SignUpForm() {
       birthdate,
     );
 
-    if (!user) return;
+    if (!user) {
+      setIsLoading(false);
+      return;
+    }
 
+    setIsLoading(false);
     navigate('/', {replace: true});
   };
 
@@ -145,9 +153,11 @@ export default function SignUpForm() {
 
       <button
         onClick={onClickToSign}
-        className="px-8 py-2 m-auto mt-8 mb-20 text-white font-bold w-fit cursor-pointer bg-black rounded-[38px]"
+        className={` ${
+          isLoading && 'opacity-30 cursor-default'
+        } px-8 py-2 m-auto mt-8 mb-20 text-white font-bold w-fit cursor-pointer bg-black rounded-[38px]`}
       >
-        feito!
+        {isLoading ? '...' : 'feito!'}
       </button>
     </div>
   );
