@@ -11,7 +11,7 @@ import {wishlistAtom} from '../../atoms/wishlist';
 import SettingsDecision from '../Sign/SettingsDecision.client';
 import {isSettingsModalOpenAtom} from '../../atoms/is-settings-modal-open';
 
-export default function Header({collections, storeName}) {
+export default function Header({collections}) {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
   const [isWishlistModalOpen, setIsWishlistModalOpen] = useAtom(
     isWishlistModalOpenAtom,
