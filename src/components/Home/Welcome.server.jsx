@@ -23,7 +23,7 @@ export default function Welcome() {
           src="/arrow-down.svg"
           width="52px"
           height="17px"
-          className="mt-20 hover:opacity-80 cursor-pointer"
+          className="mt-8 md:mt-20 hover:opacity-80 cursor-pointer"
         />
       </a>
     </div>
