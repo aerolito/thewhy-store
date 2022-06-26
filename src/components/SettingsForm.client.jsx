@@ -71,7 +71,7 @@ export default function SettingsForm() {
 
   return (
     <div className="text-center flex flex-col justify-center items-left gap-10">
-      <div className="flex w-full justify-between">
+      <div className="flex w-full justify-between flex-col md:flex-row">
         <div>
           <div className="flex flex-col gap-[1rem] text-left">
             <label className="text-principal font-bold text-text">

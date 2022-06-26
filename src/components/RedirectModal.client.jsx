@@ -1,8 +1,6 @@
-import {useNavigate} from '@shopify/hydrogen/client';
 import {useEffect, useState} from 'react';
 
 export default function RedirectModal({link}) {
-  const navigate = useNavigate();
   const [countdown, setCountdown] = useState('15');
   const [redirect, setRedirect] = useState(false);
 
@@ -25,11 +23,11 @@ export default function RedirectModal({link}) {
   }, [countdown]);
 
   if (redirect) {
-    return navigate(link);
+    window.location = link;
   }
 
   return (
-    <div className="z-50 fixed bg-black text-white font-bold w-screen h-screen inset-0 flex flex-col items-center justify-center gap-12">
+    <div className="z-50 fixed bg-black text-white font-bold w-screen h-screen inset-0 flex flex-col items-center mt-[-windo50px] justify-center gap-12">
       <img
         src="/white-logo.svg"
         width="198px"
