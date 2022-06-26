@@ -58,7 +58,7 @@ export default function SignUpForm() {
               NOME COMPLETO:
             </label>
             <input
-              className="text-principal text-text border-black border-[1px] rounded-full mb-12 max-w-[350px] py-2 px-4"
+              className="text-principal text-text border-black border-[1px] rounded-full mb-12 max-w-[350px] md:w-[350px] py-2 px-4"
               type="text"
               placeholder="Preencha com seu nome"
               onChange={(e) => setName(e.target.value)}
@@ -69,7 +69,7 @@ export default function SignUpForm() {
             <label className="text-principal font-bold text-text">EMAIL:</label>
 
             <input
-              className="text-principal text-text border-black border-[1px] rounded-full mb-12 max-w-[350px] py-2 px-4"
+              className="text-principal text-text border-black border-[1px] rounded-full mb-12 max-w-[350px] md:w-[350px] py-2 px-4"
               type="email"
               placeholder="exemplo@gmail.com"
               onChange={(e) => setEmail(e.target.value)}
@@ -82,7 +82,7 @@ export default function SignUpForm() {
             </label>
 
             <input
-              className="text-principal text-text border-black border-[1px] rounded-full mb-12 max-w-[350px] py-2 px-4"
+              className="text-principal text-text border-black border-[1px] rounded-full mb-12 max-w-[350px] md:w-[350px] py-2 px-4"
               type="password"
               placeholder="Preencha com uma senha"
               onChange={(e) => setPassword(e.target.value)}
@@ -96,7 +96,7 @@ export default function SignUpForm() {
             </label>
             <CpfCnpjInput
               value={cpf}
-              className="text-principal text-text border-black border-[1px] rounded-full mb-12 max-w-[350px] py-2 px-4"
+              className="text-principal text-text border-black border-[1px] rounded-full mb-12 max-w-[350px] md:w-[350px] py-2 px-4"
               placeholder="Preencha com seu cpf"
               onChange={(e) => setCpf(e.target.value)}
             />
@@ -107,7 +107,7 @@ export default function SignUpForm() {
               TELEFONE:
             </label>
             <input
-              className="text-principal text-text border-black border-[1px] rounded-full mb-12 max-w-[350px] py-2 px-4"
+              className="text-principal text-text border-black border-[1px] rounded-full mb-12 max-w-[350px] md:w-[350px] py-2 px-4"
               type="text"
               placeholder="Telefone (apenas números)"
               onChange={(e) => setPhoneNumber(e.target.value)}
@@ -119,7 +119,7 @@ export default function SignUpForm() {
               DATA DE NASCIMENTO:
             </label>
             <input
-              className="text-principal text-text border-black border-[1px] rounded-full mb-12 max-w-[350px] py-2 px-4"
+              className="text-principal text-text border-black border-[1px] rounded-full mb-12 max-w-[350px] md:w-[350px] py-2 px-4"
               type="text"
               placeholder="Data de Nascimento (11/11/1111)"
               onChange={(e) => setBirthdate(e.target.value)}
