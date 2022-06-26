@@ -9,6 +9,7 @@ export default function Page({params}) {
     query: QUERY,
     variables: {handle},
     preload: true,
+    cache: {maxAge: 60 * 60 * 24},
   });
 
   const blogs = data ? flattenConnection(data.blogs) : null;

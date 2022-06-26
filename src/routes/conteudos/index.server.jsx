@@ -3,11 +3,12 @@ import gql from 'graphql-tag';
 import Post from '../../components/Home/Post.server';
 import {Slogan} from '../../components/Layout/Slogan.server';
 
-export default function Contents(req) {
+export default function Contents() {
   const {data} = useShopQuery({
     query: CONTENTS_QUERY,
     variables: {page: 2},
     preload: true,
+    cache: {maxAge: 60 * 60 * 24},
   });
   const blogs = data ? flattenConnection(data.blogs) : null;
   const articles = blogs

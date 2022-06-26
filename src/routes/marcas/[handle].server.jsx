@@ -17,6 +17,7 @@ export default function Page({params, pathname}) {
       country: 'US',
     },
     preload: true,
+    cache: {maxAge: 60 * 60 * 24},
   });
 
   const unformattedProducts = productsByQuery

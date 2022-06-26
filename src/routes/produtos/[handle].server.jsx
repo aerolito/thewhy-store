@@ -19,6 +19,7 @@ export default function Product() {
       handle: decodeURIComponent(handle),
     },
     preload: true,
+    cache: {maxAge: 60 * 60 * 24},
   });
 
   const {data: pageByHandle} = useShopQuery({
@@ -27,6 +28,7 @@ export default function Product() {
       vendor: product?.vendor?.toLowerCase(),
     },
     preload: false,
+    cache: {maxAge: 60 * 60 * 24},
   });
 
   if (!product) {
