@@ -20,6 +20,11 @@ export default function NewsletterInput() {
         placeholder="Insira seu e-mail"
         type="email"
         onChange={(e) => setEmail(e.target.value)}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter') {
+            onClickToNewsletter();
+          }
+        }}
       />
       <img
         onClick={onClickToNewsletter}
@@ -27,11 +32,6 @@ export default function NewsletterInput() {
         src="/send.svg"
         width="24px"
         height="24px"
-        onKeyDown={(e) => {
-          if (e.key === 'Enter') {
-            onClickToNewsletter();
-          }
-        }}
       />
     </div>
   );
