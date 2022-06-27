@@ -1,24 +1,11 @@
 import {useState} from 'react';
-import {useAtom} from 'jotai';
-import {isWishlistModalOpenAtom} from '../../atoms/is-wishlist-modal-open';
-import {accessTokenAtom} from '../../atoms/user';
 import {handleNewsletterMailling} from '../../services/handleNewsletterMailling';
-import {signStateAtom} from '../Sign/atoms/sign-state';
 import {toast} from '../Popups/Toast.client';
 
 export default function NewsletterInput() {
-  const [, setIsWishlistModalOpen] = useAtom(isWishlistModalOpenAtom);
-  const [accessToken] = useAtom(accessTokenAtom);
-  const [, setSignState] = useAtom(signStateAtom);
   const [email, setEmail] = useState('');
 
   const onClickToNewsletter = async () => {
-    if (!accessToken) {
-      setIsWishlistModalOpen(true);
-      setSignState('signin');
-      return;
-    }
-
     const res = await handleNewsletterMailling(email);
 
     if (!res) return;
