@@ -24,4 +24,10 @@ Hydrogen and Apollo shopify graphql
 
 Deployed with Netlify
 
-[Veja a documentação completa](https://shopify.dev/custom-storefronts/hydrogen)
+[Complete doc](https://shopify.dev/custom-storefronts/hydrogen)
+
+## How manage shopify store
+
+How to add products, vendors, tags / collections, blog posts...
+
+[Google drive with videos](https://drive.google.com/drive/folders/1lBR_dIy4u19J9VcNwJTuL9cQQKATf0L3)
