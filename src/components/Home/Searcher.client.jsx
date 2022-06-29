@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import {toast} from './Toast.client';
+import {toast} from '../Popups/Toast.client';
 
 export default function Searcher() {
   const [searchQuery, setSearchQuery] = useState('');

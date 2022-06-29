@@ -1,5 +1,5 @@
 import {signInWithEmailAndPassword, signOut} from 'firebase/auth';
-import {toast} from '../components/Toast.client';
+import {toast} from '../components/Popups/Toast.client';
 
 export async function handleSignin(auth, email, password) {
   const response = signInWithEmailAndPassword(auth, email, password)

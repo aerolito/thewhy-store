@@ -1,6 +1,6 @@
 import {useShopQuery, flattenConnection} from '@shopify/hydrogen';
 import gql from 'graphql-tag';
-import {Slogan} from '../../components/Slogan.server';
+import {Slogan} from '../../components/Layout/Slogan.server';
 
 export default function Page({params}) {
   const {handle} = params;
@@ -9,6 +9,7 @@ export default function Page({params}) {
     query: QUERY,
     variables: {handle},
     preload: true,
+    cache: {maxAge: 60 * 60 * 24},
   });
 
   const blogs = data ? flattenConnection(data.blogs) : null;

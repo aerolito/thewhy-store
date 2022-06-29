@@ -1,5 +1,5 @@
 import SignUpForm from '../components/Sign/SignUpForm.client';
-import {Slogan} from '../components/Slogan.server';
+import {Slogan} from '../components/Layout/Slogan.server';
 
 export default function SignupPage() {
   return (

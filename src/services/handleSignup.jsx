@@ -3,7 +3,7 @@ import {
   updateProfile,
   updateCurrentUser,
 } from 'firebase/auth';
-import {toast} from '../components/Toast.client';
+import {toast} from '../components/Popups/Toast.client';
 import {handleUserData} from './handleUserData';
 import {handleEmailVerification} from './handleEmailVerification';
 import {handleNewsletterMailling} from './handleNewsletterMailling';

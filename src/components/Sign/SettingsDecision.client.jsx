@@ -1,11 +1,11 @@
 import {useAtom} from 'jotai';
-import {handleSigout} from '../services/handleSignout';
-import {accessTokenAtom, userIdAtom} from '../atoms/user';
-import {isSettingsModalOpenAtom} from '../atoms/is-settings-modal-open';
+import {handleSigout} from '../../services/handleSignout';
+import {accessTokenAtom, userIdAtom} from '../../atoms/user';
+import {isSettingsModalOpenAtom} from '../../atoms/is-settings-modal-open';
 import {useNavigate} from '@shopify/hydrogen/client';
 import {getAuth} from 'firebase/auth';
-import {app} from '../configs/firebase';
-import {wishlistAtom} from '../atoms/wishlist';
+import {app} from '../../configs/firebase';
+import {wishlistAtom} from '../../atoms/wishlist';
 
 export default function SettingsDecision() {
   const [, setIsSettingsModalOpen] = useAtom(isSettingsModalOpenAtom);

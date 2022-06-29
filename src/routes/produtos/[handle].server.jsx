@@ -1,12 +1,12 @@
 import {useShopQuery, Seo, useRouteParams} from '@shopify/hydrogen';
 import gql from 'graphql-tag';
-import {Slogan} from '../../components/Slogan.server';
+import {Slogan} from '../../components/Layout/Slogan.server';
 
-import ProductDetails from '../../components/ProductDetails.client';
-import NotFound from '../../components/NotFound.server';
+import ProductDetails from '../../components/Products/ProductDetails.client';
+import NotFound from '../../components/Layout/NotFound.server';
 import {Suspense} from 'react';
-import {BoxFallback} from '../../components/BoxFallback.server';
-import Tags from '../../components/Tags.server';
+import {BoxFallback} from '../../components/Layout/BoxFallback.server';
+import Tags from '../../components/Tags/Tags.server';
 
 export default function Product() {
   const {handle} = useRouteParams();
@@ -19,6 +19,7 @@ export default function Product() {
       handle: decodeURIComponent(handle),
     },
     preload: true,
+    cache: {maxAge: 60 * 60 * 24},
   });
 
   const {data: pageByHandle} = useShopQuery({
@@ -27,6 +28,7 @@ export default function Product() {
       vendor: product?.vendor?.toLowerCase(),
     },
     preload: false,
+    cache: {maxAge: 60 * 60 * 24},
   });
 
   if (!product) {

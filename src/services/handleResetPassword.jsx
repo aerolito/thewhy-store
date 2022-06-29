@@ -1,5 +1,5 @@
 import {sendPasswordResetEmail} from 'firebase/auth';
-import {toast} from '../components/Toast.client';
+import {toast} from '../components/Popups/Toast.client';
 
 export default function handleResetPassword(auth, email) {
   return sendPasswordResetEmail(auth, email)

@@ -1,12 +1,12 @@
 import {Image} from '@shopify/hydrogen';
 import {useAtom} from 'jotai';
 import {Suspense, useEffect, useState} from 'react';
-import {isWishlistModalOpenAtom} from '../atoms/is-wishlist-modal-open';
-import {accessTokenAtom, userIdAtom} from '../atoms/user';
-import {wishlistAtom} from '../atoms/wishlist';
-import {handleItemList} from '../utils/handleItemList';
-import {ConfirmToProductModal} from './ConfirmToProductModal.client';
-import {signStateAtom} from './Sign/atoms/sign-state';
+import {isWishlistModalOpenAtom} from '../../atoms/is-wishlist-modal-open';
+import {accessTokenAtom, userIdAtom} from '../../atoms/user';
+import {wishlistAtom} from '../../atoms/wishlist';
+import {handleItemList} from '../../utils/handleItemList';
+import {ConfirmToProductModal} from '../Popups/ConfirmToProductModal.client';
+import {signStateAtom} from '../Sign/atoms/sign-state';
 
 export default function ProductCard({product}) {
   const [wishlist, setWishlist] = useAtom(wishlistAtom);

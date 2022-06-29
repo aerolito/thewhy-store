@@ -1,6 +1,6 @@
 import {useNavigate} from '@shopify/hydrogen/client';
 import {useState, useEffect} from 'react';
-import {catchphrases} from '../constants/catchphrases';
+import {catchphrases} from '../../constants/catchphrases';
 
 export function ConfirmToProductModal({link}) {
   const [randomCatchphrase, setRandomCatchphrase] = useState();

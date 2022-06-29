@@ -1,15 +1,15 @@
 import {flattenConnection, useNavigate} from '@shopify/hydrogen/client';
 import {useAtom} from 'jotai';
 import {Suspense, useState} from 'react';
-import {CollectionPageSelectedAtom} from '../atoms/collection-page-selected';
-import {isWishlistModalOpenAtom} from '../atoms/is-wishlist-modal-open';
-import {accessTokenAtom, userIdAtom} from '../atoms/user';
-import {wishlistAtom} from '../atoms/wishlist';
-import {handleItemList} from '../utils/handleItemList';
+import {CollectionPageSelectedAtom} from '../../atoms/collection-page-selected';
+import {isWishlistModalOpenAtom} from '../../atoms/is-wishlist-modal-open';
+import {accessTokenAtom, userIdAtom} from '../../atoms/user';
+import {wishlistAtom} from '../../atoms/wishlist';
+import {handleItemList} from '../../utils/handleItemList';
 import Carousel from './Carousel.client';
 import ProductOptions from './ProductOptions.client';
-import RedirectModal from './RedirectModal.client';
-import {signStateAtom} from './Sign/atoms/sign-state';
+import RedirectModal from '../Popups/RedirectModal.client';
+import {signStateAtom} from '../Sign/atoms/sign-state';
 
 export default function ProductDetails({product, vendorData}) {
   const unformattedCollections = flattenConnection(product?.collections);

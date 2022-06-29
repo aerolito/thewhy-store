@@ -1,6 +1,6 @@
 import {useNavigate} from '@shopify/hydrogen/client';
 import {useAtom} from 'jotai';
-import {CollectionPageSelectedAtom} from '../atoms/collection-page-selected';
+import {CollectionPageSelectedAtom} from '../../atoms/collection-page-selected';
 
 export default function Tag({collection}) {
   const navigate = useNavigate();

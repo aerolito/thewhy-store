@@ -2,7 +2,6 @@ import {defineConfig, loadEnv} from 'vite';
 import hydrogen from '@shopify/hydrogen/plugin';
 import netlifyPlugin from '@netlify/hydrogen-platform/plugin';
 
-// https://vitejs.dev/config/
 export default defineConfig(({mode}) => {
   const env = loadEnv(mode, process.cwd(), '');
 

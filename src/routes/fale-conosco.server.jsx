@@ -1,5 +1,5 @@
-import ContactForm from '../components/ContactForm.client';
-import {Slogan} from '../components/Slogan.server';
+import ContactForm from '../components/Sign/ContactForm.client';
+import {Slogan} from '../components/Layout/Slogan.server';
 
 export default function ContactPage() {
   return (

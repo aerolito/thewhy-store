@@ -1,10 +1,10 @@
 import {useShopQuery, Seo, flattenConnection, Image} from '@shopify/hydrogen';
 import gql from 'graphql-tag';
 import {Suspense} from 'react';
-import {BoxFallback} from '../../components/BoxFallback.server';
-import NotFound from '../../components/NotFound.server';
-import ProductList from '../../components/ProductList.client';
-import {Slogan} from '../../components/Slogan.server';
+import {BoxFallback} from '../../components/Layout/BoxFallback.server';
+import NotFound from '../../components/Layout/NotFound.server';
+import ProductList from '../../components/Products/ProductList.client';
+import {Slogan} from '../../components/Layout/Slogan.server';
 
 export default function Page({params, pathname}) {
   const {handle} = params;
@@ -17,6 +17,7 @@ export default function Page({params, pathname}) {
       country: 'US',
     },
     preload: true,
+    cache: {maxAge: 60 * 60 * 24},
   });
 
   const unformattedProducts = productsByQuery

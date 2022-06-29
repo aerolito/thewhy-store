@@ -1,10 +1,14 @@
 import {useShopQuery, flattenConnection} from '@shopify/hydrogen';
 import gql from 'graphql-tag';
-import {Slogan} from '../../components/Slogan.server';
-import TagDetail from '../../components/TagDetail.client';
+import {Slogan} from '../../components/Layout/Slogan.server';
+import TagDetail from '../../components/Tags/TagDetail.client';
 
 export default function Collections({search}) {
-  const {data} = useShopQuery({query: COLLECTIONS_QUERY, preload: true});
+  const {data} = useShopQuery({
+    query: COLLECTIONS_QUERY,
+    preload: true,
+    cache: {maxAge: 60 * 60 * 24},
+  });
   const unformattedCollections = data
     ? flattenConnection(data.collections)
     : null;

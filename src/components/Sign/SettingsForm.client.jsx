@@ -2,14 +2,14 @@ import {useNavigate} from '@shopify/hydrogen/client';
 import {getAuth} from 'firebase/auth';
 import {useAtom} from 'jotai';
 import {useEffect, useState} from 'react';
-import {isSettingsModalOpenAtom} from '../atoms/is-settings-modal-open';
-import {isWishlistModalOpenAtom} from '../atoms/is-wishlist-modal-open';
-import {accessTokenAtom, userIdAtom} from '../atoms/user';
-import {app} from '../configs/firebase';
-import {getUserData} from '../services/getUserData';
-import handleDeleteUser from '../services/handleDeleteUser';
-import {handleSigout} from '../services/handleSignout';
-import {sleep} from '../utils/sleep';
+import {isSettingsModalOpenAtom} from '../../atoms/is-settings-modal-open';
+import {isWishlistModalOpenAtom} from '../../atoms/is-wishlist-modal-open';
+import {accessTokenAtom, userIdAtom} from '../../atoms/user';
+import {app} from '../../configs/firebase';
+import {getUserData} from '../../services/getUserData';
+import handleDeleteUser from '../../services/handleDeleteUser';
+import {handleSigout} from '../../services/handleSignout';
+import {sleep} from '../../utils/sleep';
 
 export default function SettingsForm() {
   const [, setIsWishlistModalOpen] = useAtom(isWishlistModalOpenAtom);

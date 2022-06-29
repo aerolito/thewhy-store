@@ -1,13 +1,13 @@
 import {useShopQuery, Seo, CacheDays} from '@shopify/hydrogen';
 import gql from 'graphql-tag';
-import Welcome from '../components/Welcome.server';
+import Welcome from '../components/Home/Welcome.server';
 import {Suspense} from 'react';
-import Searcher from '../components/Searcher.client';
-import HowThisWorks from '../components/HowThisWorks.server';
-import Brands from '../components/Brands.server';
-import Contents from '../components/Contents.server';
-import Tags from '../components/Tags.server';
-import {BoxFallback} from '../components/BoxFallback.server';
+import Searcher from '../components/Home/Searcher.client';
+import HowThisWorks from '../components/Home/HowThisWorks.server';
+import Brands from '../components/Home/Brands.server';
+import Contents from '../components/Home/Contents.server';
+import Tags from '../components/Tags/Tags.server';
+import {BoxFallback} from '../components/Layout/BoxFallback.server';
 
 export default function Index() {
   return (

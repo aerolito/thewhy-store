@@ -1,5 +1,5 @@
-import SettingsForm from '../components/SettingsForm.client';
-import {Slogan} from '../components/Slogan.server';
+import SettingsForm from '../components/Sign/SettingsForm.client';
+import {Slogan} from '../components/Layout/Slogan.server';
 
 export default function Settings() {
   return (
