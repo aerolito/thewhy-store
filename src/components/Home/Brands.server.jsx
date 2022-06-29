@@ -9,12 +9,26 @@ export default function Brands() {
         ...new Set(
           collections
             ?.map((collection) => {
-              return flattenConnection(collection.products)[0]?.vendor;
+              return flattenConnection(collection.products)?.map((product) => {
+                return product?.vendor;
+              });
             })
             ?.filter((brand) => brand),
         ),
       ]
     : null;
+
+  let emptyArrayCol = [];
+
+  const concatenatedArraysCol = emptyArrayCol.concat(
+    ...new Set(
+      brands?.map((brand) => {
+        return brand;
+      }),
+    ),
+  );
+
+  const formattedBrands = [...new Set(concatenatedArraysCol)];
 
   return (
     <div className="my-20">
@@ -22,7 +36,7 @@ export default function Brands() {
         marcas
       </h2>
       <div className="flex flex-wrap gap-4 w-[90%] justify-center m-auto">
-        {brands?.map((brand) => {
+        {formattedBrands?.map((brand) => {
           return (
             <a href={`/marcas/${brand}`} key={brand}>
               <img
