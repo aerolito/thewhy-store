@@ -55,7 +55,7 @@ export default function Header({collections}) {
 
   return (
     <>
-      <header className="pt-4" role="banner">
+      <header id="home" className="pt-4" role="banner">
         <div className="z-20  w-full px-[1rem] md:px-[2rem] lg:pb-0 mx-auto bg-white">
           <div className="h-full flex  place-content-between">
             <div className="text-center w-full flex justify-between items-center">

@@ -56,7 +56,7 @@ export default function ProductCard({product}) {
         >
           {product?.featuredImage.src ? (
             <Image
-              className="bg-white w-[274px] h-[328px] object-cover"
+              className="bg-white w-[274px] h-[328px] object-contain"
               src={product?.featuredImage.src}
               alt={product?.handle}
               width="274px"

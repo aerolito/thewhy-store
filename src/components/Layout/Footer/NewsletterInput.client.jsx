@@ -1,11 +1,12 @@
 import {useState} from 'react';
-import {handleNewsletterMailling} from '../../services/handleNewsletterMailling';
-import {toast} from '../Popups/Toast.client';
+import {handleNewsletterMailling} from '../../../services/handleNewsletterMailling';
+import {toast} from '../../Popups/Toast.client';
 
 export default function NewsletterInput() {
   const [email, setEmail] = useState('');
 
   const onClickToNewsletter = async () => {
+    setEmail('');
     const res = await handleNewsletterMailling(email);
 
     if (!res) return;
@@ -14,24 +15,18 @@ export default function NewsletterInput() {
   };
 
   return (
-    <div className="relative max-w-[254px]">
+    <div className="relative w-full max-w-[242px]">
       <input
-        className="text-principal text-smallText rounded-full px-4 pr-12 h-[34px]"
+        className="text-white w-full text-smallText rounded-full px-4 py-2 border-[1px] bg-black border-white focus:outline-none focus:border-gray-300"
         placeholder="Insira seu e-mail"
         type="email"
+        value={email}
         onChange={(e) => setEmail(e.target.value)}
         onKeyDown={(e) => {
           if (e.key === 'Enter') {
             onClickToNewsletter();
           }
         }}
-      />
-      <img
-        onClick={onClickToNewsletter}
-        className="absolute right-[40px] md:right-[24px] md:right-[16px] top-[5px] cursor-pointer bg-white"
-        src="/send.svg"
-        width="24px"
-        height="24px"
       />
     </div>
   );

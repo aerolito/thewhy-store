@@ -122,12 +122,12 @@ export default function ProductDetails({product, vendorData}) {
       </div>
 
       <div className="border-t border-principal py-8 px-2 text-principal text-text">
-        <h5 className="text-highlighted mb-4">DETALHES DO PRODUTO</h5>
-        {product.description}
+        <h5 className="text-highlighted mb-4">TRANSPARÊNCIA DO PRODUTO</h5>
+        <div dangerouslySetInnerHTML={{__html: product.descriptionHtml}} />
       </div>
       <div className="border-t border-principal py-8 px-2 text-principal text-text mb-12">
-        <h5 className="text-highlighted mb-4">TRANSPARÊNCIA</h5>
-        <span
+        <h5 className="text-highlighted mb-4">TRANSPARÊNCIA DA MARCA</h5>
+        <div
           dangerouslySetInnerHTML={{__html: vendorData?.pageByHandle?.body}}
         />
       </div>

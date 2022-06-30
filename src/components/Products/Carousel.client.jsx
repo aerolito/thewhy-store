@@ -9,6 +9,7 @@ export default function Carousel({images}) {
       hasMediaButton={false}
       hasSizeButton={false}
       hasIndexBoard={false}
+      objectFit="contain"
       images={images}
       style={{
         height: '585px',
