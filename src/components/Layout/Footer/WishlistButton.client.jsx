@@ -22,7 +22,7 @@ export default function WishlistButton() {
   return (
     <li
       onClick={onClickToWishlist}
-      className="cursor-pointer flex items-center text-sm font-semibold text-white hover:text-gray-900"
+      className="cursor-pointer flex items-center text-sm font-normal text-white hover:text-gray-900"
     >
       Lista de desejos
     </li>

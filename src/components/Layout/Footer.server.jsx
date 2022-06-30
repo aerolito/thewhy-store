@@ -15,19 +15,19 @@ export default function Footer() {
               INSTITUCIONAL
             </p>
             <ul className=" space-y-4">
-              <li className="text-sm font-semibold text-white hover:text-gray-900">
+              <li className="text-sm font-normal text-white hover:text-gray-900">
                 <Link to={`/missao`}> Missão</Link>
               </li>
-              <li className="text-sm font-semibold text-white hover:text-gray-900">
+              <li className="text-sm font-normal text-white hover:text-gray-900">
                 <Link to={`/termos`}> Termos e condições</Link>
               </li>
-              <li className="flex items-center text-sm font-semibold text-white hover:text-gray-900">
+              <li className="flex items-center text-sm font-normal text-white hover:text-gray-900">
                 <Link to={`/fale-conosco`}>Fale conosco</Link>
               </li>
             </ul>
           </div>
           <div>
-            <p className="text-text mt-12 md:mt-0 font-semibold uppercase mb-8 text-white">
+            <p className="text-text mt-12 md:mt-0 font-semibold uppercase  mb-4 text-white">
               MINHA CONTA
             </p>
             <ul className=" space-y-4">
@@ -40,7 +40,7 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <p className="text-text mt-12 md:mt-0 font-semibold uppercase mb-8  text-white">
+            <p className="text-text mt-12 md:mt-0 font-semibold uppercase  mb-4  text-white">
               RECEBA NOSSA NEWSLETTER
             </p>
 
@@ -49,20 +49,20 @@ export default function Footer() {
             </Suspense>
           </div>
           <div>
-            <p className="text-text mt-12 md:mt-0 font-semibold uppercase mb-8  text-white">
+            <p className="text-text mt-12 md:mt-0 font-semibold uppercase mb-4 text-white">
               ATENDIMENTO
             </p>
             <ul className=" space-y-4">
               <li className="flex items-center text-sm font-semibold text-white hover:text-gray-900">
                 TELEFONE
               </li>
-              <li className="flex items-center text-sm font-semibold text-white hover:text-gray-900">
+              <li className="flex items-center text-sm font-normal text-white hover:text-gray-900">
                 48 996687061
               </li>
               <li className="flex items-center text-sm font-semibold text-white hover:text-gray-900">
                 E-MAIL
               </li>
-              <li className="flex items-center text-sm font-semibold text-white hover:text-gray-900">
+              <li className="flex items-center text-sm font-normal text-white hover:text-gray-900">
                 tws@aeroli.to
               </li>
               <li className="flex items-center text-sm font-semibold text-white hover:text-gray-900">

@@ -22,7 +22,7 @@ export default function MyAccountButton() {
   return (
     <li
       onClick={onClickToMyAccount}
-      className=" cursor-pointer flex items-center text-sm font-semibold text-white hover:text-gray-900"
+      className=" cursor-pointer flex items-center text-sm font-normal text-white hover:text-gray-900"
     >
       Minha conta
     </li>
