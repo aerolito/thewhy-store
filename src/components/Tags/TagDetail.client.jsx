@@ -26,7 +26,7 @@ export default function TagDetail({collections}) {
         <h2 className="text-principal text-subtitleMobile md:text-subtitle font-bold mb-12 mt-6">
           nossos critérios
         </h2>
-        <div className="flex w-full items-center md:justify-between flex-col md:flex-row">
+        <div className="flex w-full items-center justify-between flex-row">
           {collections?.map((coll) => {
             const isSelected = collection?.handle === coll.handle;
 
@@ -39,8 +39,7 @@ export default function TagDetail({collections}) {
                     onClick={() => {
                       setSelectedCollection(coll.handle);
                     }}
-                    width="115px"
-                    height="115px"
+                    width="100%"
                     src={coll.metafields[0]?.value}
                     alt={coll.title}
                     className={`cursor-pointer ${!isSelected && 'opacity-30'}`}
