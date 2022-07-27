@@ -5,6 +5,7 @@ import {BoxFallback} from '../../components/Layout/BoxFallback.server';
 import NotFound from '../../components/Layout/NotFound.server';
 import ProductList from '../../components/Products/ProductList.client';
 import {Slogan} from '../../components/Layout/Slogan.server';
+import Tags from '../../components/Tags/Tags.server';
 
 export default function Page({params, pathname}) {
   const {handle} = params;
@@ -54,6 +55,7 @@ export default function Page({params, pathname}) {
           width="265px"
           height="60px"
         />
+        <Tags title={false} filteredCollections={products[0]?.collections} />
         <div
           className="mb-20 text-principal text-text  text-justify md:text-left"
           dangerouslySetInnerHTML={{__html: page.body}}

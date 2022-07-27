@@ -41,7 +41,10 @@ export default function Brands() {
             <a href={`/marcas/${brand}`} key={brand}>
               <img
                 key={brand}
-                src={`https://cdn.shopify.com/s/files/1/0583/2779/3826/files/${brand}.svg`}
+                src={`https://cdn.shopify.com/s/files/1/0583/2779/3826/files/${brand?.replace(
+                  ' ',
+                  '_',
+                )}.svg`}
                 height="130px"
                 className="w-[170px] h-[130px] object-contain"
               />

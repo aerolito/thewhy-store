@@ -1,6 +1,8 @@
 import {Image} from '@shopify/hydrogen';
 
 export default function Post({post}) {
+  const postTitle = post?.title?.split(':');
+
   return (
     <div className="text-md mb-4 relative cursor-pointer w-[300px] flex flex-col flex-wrap">
       <a href={`/conteudos/${post?.handle}`}>
@@ -15,7 +17,13 @@ export default function Post({post}) {
           ) : null}
         </div>
         <h2 className="text-left font-bold text-principal text-highlighted">
-          {post.title}
+          <b>
+            {postTitle[0]}
+            {postTitle[1] && ':'}
+          </b>{' '}
+          <span className=" font-[Roboto, sans-serif] font-light italic">
+            {postTitle[1]}
+          </span>
         </h2>
       </a>
     </div>

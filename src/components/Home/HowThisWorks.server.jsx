@@ -20,14 +20,14 @@ export default function HowThisWorks() {
         </div>
 
         <img
-          src="/howfoto.jpg"
-          className="w-[90%] max-w-[450px] h-[350px] md:pl-[2rem]"
+          src="/homefoto.png"
+          className="w-[90%] max-w-[450px] h-[350px] md:pl-[2rem] object-cover"
         />
       </section>
       <section className="flex flex-col-reverse md:flex-row items-center md:items-start d:items-start gap-20 md:gap-0 justify-center text-justify">
         <img
           src="/misfoto.jpeg"
-          className="w-[90%] max-w-[450px] h-[350px] md:pr-[2rem]"
+          className="w-[90%] max-w-[450px] h-[350px] md:pr-[2rem] object-cover"
         />
 
         <div className=" w-[90%] md:w-1/2">

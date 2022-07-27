@@ -3,12 +3,19 @@ import gql from 'graphql-tag';
 import {Suspense} from 'react';
 import Tag from './Tag.client';
 
-export default function Tags() {
+export default function Tags({title = true, filteredCollections}) {
   const {data} = useShopQuery({query: COLLECTIONS_QUERY, preload: true});
   const unformattedCollections = data
     ? flattenConnection(data.collections)
     : null;
-  const collections = unformattedCollections
+  const collections = filteredCollections
+    ? filteredCollections?.map((collection) => {
+        return {
+          ...collection,
+          metafields: [{}, {value: collection?.metafield?.value}],
+        };
+      })
+    : unformattedCollections
     ? unformattedCollections?.map((collection) => {
         return {
           ...collection,
@@ -19,9 +26,11 @@ export default function Tags() {
 
   return (
     <div className="text-center flex flex-col justify-center items-center">
-      <h2 className="text-principal text-subtitleMobile md:text-subtitle font-bold mb-12 mt-6">
-        nossos critérios
-      </h2>
+      {title && (
+        <h2 className="text-principal text-subtitleMobile md:text-subtitle font-bold mb-12 mt-6">
+          nossos critérios
+        </h2>
+      )}
       <div className="flex flex-col justify-between mt-[-10px] items-center md:flex-row">
         {collections &&
           collections?.map((collection) => (
