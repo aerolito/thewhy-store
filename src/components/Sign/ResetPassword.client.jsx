@@ -65,7 +65,7 @@ export default function ResetPassword() {
             id="email"
             value={email}
             className="border border-black max-w-[400px] m-auto text-principal text-smallText rounded-full block w-full p-2.5"
-            placeholder="ENDEREÇO DE E-MAIL"
+            placeholder="Insira deu e-mail"
             onChange={(e) => setEmail(e.target.value)}
           ></input>
           <button
