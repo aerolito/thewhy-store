@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import {toast} from '../Popups/Toast.client';
 
-export default function Searcher() {
+export default function Searcher({title = true}) {
   const [searchQuery, setSearchQuery] = useState('');
 
   const onHandleSearch = () => {
@@ -18,9 +18,11 @@ export default function Searcher() {
       id="searcher"
       className="text-center flex flex-col justify-center items-center"
     >
-      <h2 className="text-principal text-subtitleMobile md:text-subtitle font-bold mb-12 mt-6">
-        o que você precisa?
-      </h2>
+      {title && (
+        <h2 className="text-principal text-subtitleMobile md:text-subtitle font-bold mb-12 mt-6">
+          o que você precisa?
+        </h2>
+      )}
       <div className="relative w-full max-w-[450px]">
         <input
           className="w-full text-principal text-text border-principal p-2 border-[3px] rounded-full mb-6 px-8 pr-14 h-[60px]"

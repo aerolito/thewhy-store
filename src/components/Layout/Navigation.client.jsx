@@ -29,7 +29,7 @@ export default function Navigation({isOpen, setIsOpen}) {
             <ul className="pt-2">
               <li>
                 <Link
-                  className="group py-2 text-highlighted text-principal flex items-center justify-between hover:text-hovered"
+                  className="group py-2 text-[1.23rem] text-principal flex items-center justify-between hover:text-hovered"
                   to={`/`}
                   onClick={() => setIsOpen(false)}
                 >
@@ -39,7 +39,7 @@ export default function Navigation({isOpen, setIsOpen}) {
 
               <li>
                 <Link
-                  className="group py-2 text-highlighted text-principal flex items-center justify-between  hover:text-hovered"
+                  className="group py-2 text-[1.23rem] text-principal flex items-center justify-between  hover:text-hovered"
                   to={`/missao`}
                   onClick={() => setIsOpen(false)}
                 >
@@ -49,7 +49,7 @@ export default function Navigation({isOpen, setIsOpen}) {
 
               <li>
                 <a
-                  className="group py-2 text-highlighted text-principal flex items-center justify-between  hover:text-hovered"
+                  className="group py-2 text-[1.23rem] text-principal flex items-center justify-between  hover:text-hovered"
                   href={`/conteudos`}
                   onClick={() => setIsOpen(false)}
                 >
@@ -59,7 +59,7 @@ export default function Navigation({isOpen, setIsOpen}) {
 
               <li>
                 <a
-                  className="group py-2 text-highlighted text-principal flex items-center justify-between  hover:text-hovered"
+                  className="group py-2 text-[1.23rem] text-principal flex items-center justify-between  hover:text-hovered"
                   href={`/criterios`}
                   onClick={() => setIsOpen(false)}
                 >
@@ -69,7 +69,7 @@ export default function Navigation({isOpen, setIsOpen}) {
 
               <li>
                 <Link
-                  className="group py-2 text-highlighted text-principal flex items-center justify-between  hover:text-hovered"
+                  className="group py-2 text-[1.23rem] text-principal flex items-center justify-between  hover:text-hovered"
                   to={`https://aeroli.to`}
                   onClick={() => setIsOpen(false)}
                 >

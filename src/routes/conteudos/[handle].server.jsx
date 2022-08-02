@@ -19,6 +19,8 @@ export default function Page({params}) {
       })[0][0]
     : null;
 
+  const postTitle = article?.title?.split(':');
+
   return (
     <>
       <Slogan />
@@ -36,7 +38,13 @@ export default function Page({params}) {
         />
 
         <h2 className="text-principal text-left mr-auto text-subtitleMobile md:text-subtitle font-bold">
-          {article?.title}
+          <b>
+            {postTitle[0]}
+            {postTitle[1] && ':'}
+          </b>{' '}
+          <span className=" font-[Roboto, sans-serif] font-light italic">
+            {postTitle[1]}
+          </span>
         </h2>
 
         <div

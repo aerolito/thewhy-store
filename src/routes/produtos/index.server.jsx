@@ -6,6 +6,7 @@ import ProductList from '../../components/Products/ProductList.client';
 import {Suspense} from 'react';
 import {BoxFallback} from '../../components/Layout/BoxFallback.server';
 import {Slogan} from '../../components/Layout/Slogan.server';
+import Searcher from '../../components/Home/Searcher.client';
 
 export default function ProductsPage(req) {
   const params = req?.request?.preloadURL;
@@ -75,10 +76,14 @@ export default function ProductsPage(req) {
     <>
       <div className="mb-12">
         <Slogan />
+
+        <Suspense fallback={<BoxFallback />}>
+          <Searcher title={false} />
+        </Suspense>
         <div className=" min-h-[50vh] flex my-12 gap-12 md:gap-0 flex-col md:flex-row">
           {products && products?.length > 0 ? (
             <>
-              <div className="flex flex-col items-center md:gap-12 md:absolute md:left-[3rem]">
+              {/* <div className="flex flex-col items-center md:gap-12 md:absolute md:left-[3rem]">
                 <Suspense fallback={<BoxFallback />}>
                   <Filter
                     products={products}
@@ -96,7 +101,7 @@ export default function ProductsPage(req) {
                     label="MARCAS"
                   />
                 </Suspense>
-              </div>
+              </div> */}
               <div className="w-[91%] lg:w-full m-auto">
                 <Suspense fallback={<BoxFallback />}>
                   <ProductList products={products} />

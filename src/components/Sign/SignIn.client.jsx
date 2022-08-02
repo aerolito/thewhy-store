@@ -70,7 +70,7 @@ export default function SignIn() {
           id="email"
           value={email}
           className="border border-black text-principal text-smallText rounded-full block w-full p-2.5"
-          placeholder="ENDEREÇO DE E-MAIL"
+          placeholder="Insira deu e-mail"
           onChange={(e) => setEmail(e.target.value)}
         ></input>
         <input
@@ -79,7 +79,7 @@ export default function SignIn() {
           id="password"
           value={password}
           className="border border-black text-principal text-smallText rounded-full block w-full p-2.5"
-          placeholder="SENHA"
+          placeholder="Insira sua senha"
           onChange={(e) => setPassword(e.target.value)}
         ></input>
         <button

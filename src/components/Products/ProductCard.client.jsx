@@ -68,15 +68,15 @@ export default function ProductCard({product}) {
               {product?.title}
             </p>
 
-            <div className="flex">
+            <div className="flex -ml-[4px]">
               {product?.collections?.length > 0 &&
                 product?.collections?.map((collection) => (
                   <Image
                     key={collection?.handle}
                     src={collection?.metafield?.value ?? '#'}
                     alt={collection?.handle}
-                    width="31px"
-                    height="31px"
+                    width="47px"
+                    height="47px"
                   />
                 ))}
             </div>

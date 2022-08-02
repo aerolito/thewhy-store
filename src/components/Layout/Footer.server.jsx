@@ -65,7 +65,7 @@ export default function Footer() {
               <li className="flex items-center text-sm font-normal text-white hover:text-gray-900">
                 tws@aeroli.to
               </li>
-              <li className="flex items-center text-sm font-semibold text-white hover:text-gray-900">
+              <li className="flex items-center text-sm font-normal text-white hover:text-gray-900">
                 09:00 - 18:00
               </li>
             </ul>
