@@ -9,7 +9,7 @@ export default function Welcome() {
         </h1>
         <p className="text-principal text-text">
           The Why Store é uma plataforma de curadoria <br /> especializada em
-          marcas que juntam design, moda e <br /> consumo consciente. Naveguem e
+          marcas que juntam design, moda e <br /> consumo consciente. Navegue e
           experimente uma <br /> nova forma de comprar.
         </p>
         <Link
