@@ -41,10 +41,10 @@ export default function HowThisWorks() {
           </p>
           <p className="text-lg font-medium mb-8 leading-6">
             2) Consumo e consumismo são coisas diferentes. Por isso, experiência
-            de compra na TWS é diferente do tradicional. Queremos provocar
-            aprendizado e reflexão. Inclusive é este o motivo do ‘Why’ no nosso
-            nome. Queremos que você crie o hábito de se perguntar: ‘Por que
-            estou comprando o que estou comprando?’
+            de compra na TWS foge do tradicional. Queremos provocar aprendizado
+            e reflexão. Inclusive é este o motivo do ‘Why’ no nosso nome.
+            Queremos que você crie o hábito de se perguntar: ‘Por que estou
+            comprando o que estou comprando?’
           </p>
         </div>
       </section>
