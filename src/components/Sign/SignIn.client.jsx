@@ -32,7 +32,7 @@ export default function SignIn() {
     setUserId(user.userId);
 
     setIsLoading(false);
-    navigate('/', {replace: true});
+    navigate('/', {replace: false});
   };
 
   return (

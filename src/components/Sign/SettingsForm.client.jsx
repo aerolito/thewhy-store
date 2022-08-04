@@ -66,7 +66,7 @@ export default function SettingsForm() {
     setPhoneNumber('');
     setIsSettingsModalOpen(false);
 
-    navigate('/', {replace: true});
+    navigate('/', {replace: false});
   };
 
   return (
