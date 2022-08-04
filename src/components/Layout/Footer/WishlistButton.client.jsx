@@ -16,7 +16,7 @@ export default function WishlistButton() {
       return;
     }
 
-    navigate('/favoritos', {replace: true});
+    navigate('/favoritos', {replace: false});
   };
 
   return (

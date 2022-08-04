@@ -16,7 +16,7 @@ export default function MyAccountButton() {
       return;
     }
 
-    navigate('/configuracoes', {replace: true});
+    navigate('/configuracoes', {replace: false});
   };
 
   return (

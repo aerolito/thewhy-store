@@ -50,7 +50,7 @@ export default function SignUpForm() {
     }
 
     setIsLoading(false);
-    navigate('/', {replace: true});
+    navigate('/', {replace: false});
   };
 
   useEffect(() => {

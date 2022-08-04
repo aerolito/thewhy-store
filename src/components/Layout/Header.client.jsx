@@ -41,7 +41,7 @@ export default function Header({collections}) {
       return;
     }
 
-    navigate('/favoritos', {replace: true});
+    navigate('/favoritos', {replace: false});
   }
 
   function handleUserAccess() {

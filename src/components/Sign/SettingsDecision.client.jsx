@@ -26,7 +26,7 @@ export default function SettingsDecision() {
     setWishlist([]);
 
     setIsSettingsModalOpen(false);
-    navigate('/', {replace: true});
+    navigate('/', {replace: false});
   };
 
   return (
