@@ -20,7 +20,7 @@ export function ConfirmToProductModal({link}) {
               'Compre menos. Compre melhor. E se estiver na dúvida, talvez nem seja o caso de comprar.'}
           </span>
           <button
-            onClick={() => navigate(`/produtos/${link}`, {replace: true})}
+            onClick={() => navigate(`/produtos/${link}`, {replace: false})}
             type="button"
             className="text-principal m-[0px] bg-white font-medium w-fit rounded-full text-[14px] p-1.5 px-[30px] hover:opacity-80"
           >
