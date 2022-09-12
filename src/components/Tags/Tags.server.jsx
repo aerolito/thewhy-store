@@ -31,7 +31,7 @@ export default function Tags({title = true, filteredCollections}) {
           nossos critérios
         </h2>
       )}
-      <div className="flex flex-col justify-between mt-[-10px] items-center md:flex-row">
+      <div className="flex flex-wrap w-[90vw] justify-center mt-[-10px] items-center md:flex-row">
         {collections &&
           collections?.map((collection) => (
             <Suspense>

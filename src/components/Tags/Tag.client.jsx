@@ -16,9 +16,9 @@ export default function Tag({collection}) {
       onClick={() => {
         onClickOnTag(collection?.handle);
       }}
-      className="cursor-pointer 
-    w-[137px]
-    h-[170px]"
+      className="cursor-pointer w-[20vw] h-[20vw]
+    max-w-[137px]
+    max-h-[170px]"
       src={collection?.metafields[1]?.value}
       alt={collection?.title}
     />
