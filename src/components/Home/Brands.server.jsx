@@ -45,8 +45,7 @@ export default function Brands() {
                   ' ',
                   '_',
                 )}.svg`}
-                height="130px"
-                className="w-[170px] h-[130px] object-contain"
+                className="w-[20vw] h-[20vw] object-contain max-w-[170px] max-h-[130px]"
               />
             </a>
           );
