@@ -4027,7 +4027,7 @@ react-cpf-cnpj-input@^1.0.0:
 
 react-device-detect@^2.2.2:
   version "2.2.2"
-  resolved "https://registry.npmjs.org/react-device-detect/-/react-device-detect-2.2.2.tgz"
+  resolved "https://registry.yarnpkg.com/react-device-detect/-/react-device-detect-2.2.2.tgz#dbabbce798ec359c83f574c3edb24cf1cca641a5"
   integrity sha512-zSN1gIAztUekp5qUT/ybHwQ9fmOqVT1psxpSlTn1pe0CO+fnJHKRLOWWac5nKxOxvOpD/w84hk1I+EydrJp7SA==
   dependencies:
     ua-parser-js "^1.0.2"

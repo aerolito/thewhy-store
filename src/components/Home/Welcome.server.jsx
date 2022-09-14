@@ -1,7 +1,9 @@
 import {Link} from '@shopify/hydrogen';
-import {isMobile} from 'react-device-detect';
+import * as rdd from 'react-device-detect';
 
 export default function Welcome() {
+  const isMobile = rdd?.isMobile;
+
   return (
     <div className="z-1 h-[calc(100vh-60px)] md:h-[calc(100vh-80px)] text-center flex flex-col justify-around items-center gap-8 py-20">
       <div className="flex flex-col gap-8 items-center">
@@ -12,7 +14,7 @@ export default function Welcome() {
           <p className="text-principal text-text">
             The Why Store é uma plataforma de curadoria especializada em marcas
             que juntam design, moda e consumo consciente. Navegue e experimente
-            uma nova forma de comprar.
+            uma nova forma de comprar
           </p>
         ) : (
           <p className="text-principal text-text">
