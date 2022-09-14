@@ -1,5 +1,4 @@
 import {Link} from '@shopify/hydrogen';
-import {isMobile} from 'react-device-detect';
 
 export default function Welcome() {
   return (
@@ -8,19 +7,11 @@ export default function Welcome() {
         <h1 className="md:leading-[55px] font-bold text-principal text-subtitleMobile md:text-title">
           COMPRE MENOS, <br /> ESCOLHA MELHOR
         </h1>
-        {isMobile ? (
-          <p className="text-principal text-text">
-            The Why Store é uma plataforma de curadoria especializada em marcas
-            que juntam design, moda e consumo consciente. Navegue e experimente
-            uma nova forma de comprar.
-          </p>
-        ) : (
-          <p className="text-principal text-text">
-            The Why Store é uma plataforma de curadoria <br /> especializada em
-            marcas que juntam design, moda e <br /> consumo consciente. Navegue
-            e experimente uma <br /> nova forma de comprar.
-          </p>
-        )}
+        <p className="text-principal text-text max-w-[378px]">
+          The Why Store é uma plataforma de curadoria especializada em marcas
+          que juntam design, moda e consumo consciente. Navegue e experimente
+          uma nova forma de comprar
+        </p>
         <Link
           to="/missao"
           className="rounded-full text-[14px] bg-principal p-2 px-[30px] text-white hover:opacity-80"
