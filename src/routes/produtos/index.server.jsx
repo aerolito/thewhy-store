@@ -137,7 +137,11 @@ const PRODUCTS = gql`
               node {
                 handle
                 title
-                metafield(namespace: "my_fields", key: "collection_logo") {
+                metafields(
+                  identifiers: [
+                    {namespace: "my_fields", key: "collection_logo"}
+                  ]
+                ) {
                   value
                 }
               }
