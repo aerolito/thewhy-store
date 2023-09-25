@@ -13,7 +13,7 @@ import {signStateAtom} from '../Sign/atoms/sign-state';
 
 export default function ProductDetails({product, vendorData}) {
   const unformattedCollections = flattenConnection(product?.collections);
-  const link = product.metafields[0].value;
+  const link = product.metafields?.value ?? '';
 
   const collections = unformattedCollections
     ? unformattedCollections?.map((collection) => {
@@ -53,7 +53,17 @@ export default function ProductDetails({product, vendorData}) {
       return;
     }
 
-    const list = await handleItemList(product, wishlist, userId);
+    const list = await handleItemList(
+      {
+        ...product,
+        featuredImage: {
+          ...product?.featuredImage,
+          src: product?.featuredImage?.url,
+        },
+      },
+      wishlist,
+      userId,
+    );
 
     setWishlist(list);
   };
