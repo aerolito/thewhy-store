@@ -16,8 +16,6 @@ export default function ProductCard({product}) {
   const [userId] = useAtom(userIdAtom);
   const [redirect, setRedirect] = useState('');
 
-  console.log(product);
-
   const handleClick = async () => {
     if (!accessToken) {
       setIsWishlistModalOpen(true);
