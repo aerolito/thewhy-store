@@ -16,7 +16,7 @@ export default function Collections({search}) {
     ? unformattedCollections?.map((collection) => {
         return {
           ...collection,
-          metafields: flattenConnection(collection.metafields),
+          metafields: collection.metafields[0],
         };
       })
     : null;
@@ -48,12 +48,10 @@ const COLLECTIONS_QUERY = gql`
           image {
             url
           }
-          metafields(first: 1) {
-            edges {
-              node {
-                value
-              }
-            }
+          metafields(
+            identifiers: [{namespace: "my_fields", key: "collection_image"}]
+          ) {
+            value
           }
         }
       }

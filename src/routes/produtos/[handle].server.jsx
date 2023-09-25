@@ -68,12 +68,10 @@ const QUERY = gql`
         edges {
           node {
             handle
-            metafields(first: 1) {
-              edges {
-                node {
-                  value
-                }
-              }
+            metafields(
+              identifiers: [{namespace: "my_fields", key: "collection_logo"}]
+            ) {
+              value
             }
           }
         }
@@ -99,16 +97,10 @@ const QUERY = gql`
           }
         }
       }
-      metafields(first: 20) {
-        edges {
-          node {
-            id
-            type
-            namespace
-            key
-            value
-          }
-        }
+      metafields(identifiers: [{namespace: "my_fields", key: "link"}]) {
+        namespace
+        key
+        value
       }
       seo {
         description

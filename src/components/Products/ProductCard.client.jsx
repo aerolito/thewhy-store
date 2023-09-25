@@ -73,7 +73,7 @@ export default function ProductCard({product}) {
                 product?.collections?.map((collection) => (
                   <Image
                     key={collection?.handle}
-                    src={collection?.metafield?.value ?? '#'}
+                    src={collection?.metafields[0]?.value ?? '#'}
                     alt={collection?.handle}
                     width="47px"
                     height="47px"

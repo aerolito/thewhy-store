@@ -19,7 +19,7 @@ export default function Tag({collection}) {
       className="cursor-pointer w-[20vw] h-[20vw]
     max-w-[137px]
     max-h-[170px]"
-      src={collection?.metafields[1]?.value}
+      src={collection?.metafields?.value}
       alt={collection?.title}
     />
   );

@@ -40,7 +40,7 @@ export default function TagDetail({collections}) {
                       setSelectedCollection(coll.handle);
                     }}
                     width="100%"
-                    src={coll.metafields[0]?.value}
+                    src={coll.metafields?.value}
                     alt={coll.title}
                     className={`cursor-pointer ${!isSelected && 'opacity-30'}`}
                   />
@@ -56,7 +56,7 @@ export default function TagDetail({collections}) {
                 }}
                 width="115px"
                 height="115px"
-                src={coll.metafields[0]?.value}
+                src={coll.metafields?.value}
                 alt={coll.title}
                 className={`cursor-pointer ${!isSelected && 'opacity-30'}`}
               />
