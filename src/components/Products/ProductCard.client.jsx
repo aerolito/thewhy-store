@@ -27,7 +27,6 @@ export default function ProductCard({product}) {
 
     setWishlist(list);
   };
-
   useEffect(() => {
     return () => {
       setRedirect('');
