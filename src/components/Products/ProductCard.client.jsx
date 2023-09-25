@@ -16,6 +16,8 @@ export default function ProductCard({product}) {
   const [userId] = useAtom(userIdAtom);
   const [redirect, setRedirect] = useState('');
 
+  console.log(product);
+
   const handleClick = async () => {
     if (!accessToken) {
       setIsWishlistModalOpen(true);
@@ -73,7 +75,7 @@ export default function ProductCard({product}) {
                 product?.collections?.map((collection) => (
                   <Image
                     key={collection?.handle}
-                    src={collection?.metafield?.value ?? '#'}
+                    src={collection?.metafields[0]?.value ?? '#'}
                     alt={collection?.handle}
                     width="47px"
                     height="47px"

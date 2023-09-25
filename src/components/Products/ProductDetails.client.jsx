@@ -13,13 +13,13 @@ import {signStateAtom} from '../Sign/atoms/sign-state';
 
 export default function ProductDetails({product, vendorData}) {
   const unformattedCollections = flattenConnection(product?.collections);
-  const link = flattenConnection(product.metafields)[0].value;
+  const link = product.metafields[0].value;
 
   const collections = unformattedCollections
     ? unformattedCollections?.map((collection) => {
         return {
           ...collection,
-          metafields: flattenConnection(collection.metafields),
+          metafields: collection.metafields[0],
         };
       })
     : null;
@@ -110,7 +110,7 @@ export default function ProductDetails({product, vendorData}) {
                 <img
                   key={collection?.handle}
                   className="cursor-pointer"
-                  src={collection?.metafields[0].value}
+                  src={collection?.metafields.value}
                   width="100px"
                   height="100px"
                   onClick={() => onClickOnTag(collection?.handle)}

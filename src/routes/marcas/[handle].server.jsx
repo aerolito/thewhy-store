@@ -101,7 +101,11 @@ const PRODUCTS = gql`
             edges {
               node {
                 handle
-                metafield(namespace: "my_fields", key: "collection_logo") {
+                metafields(
+                  identifiers: [
+                    {namespace: "my_fields", key: "collection_logo"}
+                  ]
+                ) {
                   value
                 }
               }

@@ -8,18 +8,19 @@ export default function Tags({title = true, filteredCollections}) {
   const unformattedCollections = data
     ? flattenConnection(data.collections)
     : null;
+
   const collections = filteredCollections
     ? filteredCollections?.map((collection) => {
         return {
           ...collection,
-          metafields: [{}, {value: collection?.metafield?.value}],
+          metafields: {value: collection?.metafields[0]?.value},
         };
       })
     : unformattedCollections
     ? unformattedCollections?.map((collection) => {
         return {
           ...collection,
-          metafields: flattenConnection(collection.metafields),
+          metafields: collection.metafields[0],
         };
       })
     : null;
@@ -54,12 +55,12 @@ const COLLECTIONS_QUERY = gql`
           image {
             url
           }
-          metafields(first: 2) {
-            edges {
-              node {
-                value
-              }
-            }
+          metafields(
+            identifiers: [{namespace: "my_fields", key: "collection_image"}]
+          ) {
+            namespace
+            key
+            value
           }
         }
       }
